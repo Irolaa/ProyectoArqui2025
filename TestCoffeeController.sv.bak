@@ -1,0 +1,58 @@
+`timescale 1ns/1ps
+
+module TestCoffeeController;
+
+    logic clk;
+    logic reset;
+    logic next_button;
+    logic select_button;
+    logic [6:0] seg_type;
+    logic [6:0] seg_state;
+    logic [4:0] led;
+
+    // Instancia del módulo principal
+    CoffeeController uut (
+        .clk(clk),
+        .reset(reset),
+        .next_button(next_button),
+        .select_button(select_button),
+        .seg_type(seg_type),
+        .seg_state(seg_state),
+        .led(led)
+    );
+
+    // Reloj (10ns → 100MHz)
+    always #5 clk = ~clk;
+
+    initial begin
+        // Inicialización
+        clk = 0;
+        reset = 1;
+        next_button = 0;
+        select_button = 0;
+
+        #20;
+        reset = 0;
+
+        // === Cambio de tipo de café ===
+        $display("=== Cambiando café ===");
+        next_button = 1; #20; next_button = 0;
+        next_button = 1; #20; next_button = 0;
+        // Debe haber pasado: E → L → C
+
+        // === Iniciar preparación ===
+        $display("=== Iniciar café ===");
+        select_button = 1; #20; select_button = 0;
+
+        // === Esperar estados ===
+        repeat(20) begin
+            #50;
+            $display("State = %d, seg_type=%b, seg_state=%b, led=%b",
+                     uut.state, seg_type, seg_state, led);
+        end
+
+        $display("=== Fin de simulación ===");
+        $stop;
+    end
+
+endmodule

@@ -1,0 +1,79 @@
+module CoffeeController(
+    input  logic clk,               // 50 MHz
+    input  logic reset,             // Reset global
+    input  logic next_button,       // Cambio de tipo de café
+    input  logic select_button,    // Iniciar preparación
+    output logic [6:0] seg_type,    // Display tipo (E,L,C)
+    output logic [6:0] seg_state,   // Display estado (A,C,L,U,E)
+    output logic [4:0] led          // Animación final
+);
+
+    // ==== Señales internas ====
+    logic slow_clk;         // 1 Hz
+    logic next_clean;
+    logic select_clean;
+    logic [1:0] coffee_sel; // 00=E, 01=L, 10=C
+    logic [2:0] state;
+    logic done;
+
+    // ==== Antirrebote ====
+    Debounce #(.DEBOUNCE_TIME(500_000)) db_next (
+        .clk(clk),
+        .reset(reset),
+        .button_in(next_button),
+        .button_out(next_clean)
+    );
+
+    Debounce #(.DEBOUNCE_TIME(500_000)) db_sel (
+        .clk(clk),
+        .reset(reset),
+        .button_in(select_button),
+        .button_out(select_clean)
+    );
+
+    // ==== Cambio de café ====
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset)
+            coffee_sel <= 2'b00;
+        else if (next_clean)
+            coffee_sel <= (coffee_sel == 2'b10) ? 2'b00 : coffee_sel + 1;
+    end
+
+    // ==== Divisor 1 Hz ====
+    ClockDivider div1 (
+        .clk(clk),
+        .reset(reset),
+        .clk_out(slow_clk)
+    );
+
+    // ==== Máquina de estados ====
+    CoffeeFSM fsm1 (
+        .clk(slow_clk),
+        .reset(reset),
+        .start(select_clean),
+        .coffee_sel(coffee_sel),
+        .state(state),
+        .done(done)
+    );
+
+    // ==== Decodificador de tipo (display 1) ====
+    DisplayDecoder dec_type (
+        .char_sel({2'b00, coffee_sel}), 
+        .segments(seg_type)
+    );
+
+    // ==== Decodificador de estado (display 4) ====
+    DisplayDecoder dec_state (
+        .char_sel(state),
+        .segments(seg_state)
+    );
+
+    // ==== LED Animation ====
+    LED_Animation anim1 (
+        .clk(clk),
+        .reset(reset),
+        .active(done),
+        .led(led)
+    );
+
+endmodule

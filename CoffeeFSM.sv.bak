@@ -1,0 +1,115 @@
+module CoffeeFSM(
+    input  logic clk,            // 1 Hz
+    input  logic reset,
+    input  logic start,
+    input  logic [1:0] coffee_sel, // 00=E, 01=L, 10=C
+    output logic [2:0] state,
+    output logic done
+);
+
+    typedef enum logic [2:0] {
+        IDLE  = 3'd0,
+        AGUA  = 3'd1,
+        CAFE  = 3'd2,
+        LECHE = 3'd3,
+        AZUCAR= 3'd4,
+        CREMA = 3'd5,
+        END   = 3'd6
+    } state_t;
+
+    state_t current, next;
+
+    logic [2:0] timer;
+    logic timer_done;
+
+    // Duraciones según el PDF
+    function automatic [2:0] get_duration(input state_t st, input logic [1:0] sel);
+        case (st)
+
+            AGUA:
+                get_duration = (sel == 2'b00) ? 3'd2 :     // Expreso
+                                (sel == 2'b01) ? 3'd1 :     // Leche
+                                                 3'd2;      // Capuchino
+
+            CAFE:
+                get_duration = (sel == 2'b00) ? 3'd1 :     // Expreso
+                                (sel == 2'b01) ? 3'd1 :     // Leche
+                                                 3'd0;      // Capuchino no usa café
+
+            LECHE:  get_duration = 3'd1;
+            AZUCAR: get_duration = 3'd1;
+            CREMA:  get_duration = 3'd1;
+
+            default: get_duration = 3'd0;
+        endcase
+    endfunction
+
+    // Estado + temporizador
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            current <= IDLE;
+            timer <= 0;
+        end else begin
+            current <= next;
+
+            if (current != next)
+                timer <= 0;
+            else if (current != IDLE && current != END)
+                timer <= timer + 1;
+        end
+    end
+
+    assign timer_done = (timer >= get_duration(current, coffee_sel));
+
+    // Lógica de transición
+    always_comb begin
+        next = current;
+        done = 0;
+
+        case (current)
+
+            IDLE:
+                if (start) next = AGUA;
+
+            AGUA:
+                if (timer_done) begin
+                    case (coffee_sel)
+                        2'b00: next = CAFE;    // Expreso
+                        2'b01: next = CAFE;    // Leche
+                        2'b10: next = LECHE;   // Capuchino
+                    endcase
+                end
+
+            CAFE:
+                if (timer_done) begin
+                    case (coffee_sel)
+                        2'b00: next = END;
+                        2'b01: next = LECHE;
+                        default: next = END;
+                    endcase
+                end
+
+            LECHE:
+                if (timer_done)
+                    next = AZUCAR;
+
+            AZUCAR:
+                if (timer_done) begin
+                    if (coffee_sel == 2'b10)
+                        next = CREMA;
+                    else
+                        next = END;
+                end
+
+            CREMA:
+                if (timer_done)
+                    next = END;
+
+            END:
+                done = 1;
+        endcase
+    end
+
+    assign state = current;
+
+endmodule

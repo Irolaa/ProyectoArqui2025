@@ -1,0 +1,10 @@
+
+State Machine - |CoffeeController|CoffeeFSM:fsm1|current
+Name current.FINISH current.CREAM current.SUGAR current.MILK current.COFFEE current.WATER current.IDLE 
+current.IDLE 0 0 0 0 0 0 0 
+current.WATER 0 0 0 0 0 1 1 
+current.COFFEE 0 0 0 0 1 0 1 
+current.MILK 0 0 0 1 0 0 1 
+current.SUGAR 0 0 1 0 0 0 1 
+current.CREAM 0 1 0 0 0 0 1 
+current.FINISH 1 0 0 0 0 0 1 

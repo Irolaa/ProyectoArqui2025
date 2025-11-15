@@ -1,0 +1,101 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do CoffeeMaker_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/LED_Animation.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:05:46 on Nov 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/LED_Animation.sv 
+# -- Compiling module LED_Animation
+# 
+# Top level modules:
+# 	LED_Animation
+# End time: 16:05:46 on Nov 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/CoffeeFSM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:05:46 on Nov 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/CoffeeFSM.sv 
+# -- Compiling module CoffeeFSM
+# 
+# Top level modules:
+# 	CoffeeFSM
+# End time: 16:05:46 on Nov 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/ClockDivider.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:05:46 on Nov 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/ClockDivider.sv 
+# -- Compiling module ClockDivider
+# 
+# Top level modules:
+# 	ClockDivider
+# End time: 16:05:47 on Nov 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/DisplayDecoder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:05:47 on Nov 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/DisplayDecoder.sv 
+# -- Compiling module DisplayDecoder
+# 
+# Top level modules:
+# 	DisplayDecoder
+# End time: 16:05:47 on Nov 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/CoffeeController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:05:47 on Nov 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/CoffeeController.sv 
+# -- Compiling module CoffeeController
+# 
+# Top level modules:
+# 	CoffeeController
+# End time: 16:05:47 on Nov 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/TestCoffeeController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:05:47 on Nov 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/TestCoffeeController.sv 
+# -- Compiling module TestCoffeeController
+# 
+# Top level modules:
+# 	TestCoffeeController
+# End time: 16:05:47 on Nov 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  TestCoffeeController
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" TestCoffeeController 
+# Start time: 16:05:47 on Nov 14,2025
+# Loading sv_std.std
+# Loading work.TestCoffeeController
+# Loading work.CoffeeController
+# Loading work.ClockDivider
+# Loading work.CoffeeFSM
+# Loading work.DisplayDecoder
+# Loading work.LED_Animation
+# ** Warning: (vsim-3015) C:/CoffeeMaker/CoffeeController.sv(44): [PCDPC] - Port size (4) does not match connection size (3) for port 'char_sel'. The port definition is at: C:/CoffeeMaker/DisplayDecoder.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /TestCoffeeController/uut/dec_state File: C:/CoffeeMaker/DisplayDecoder.sv
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# === INICIO SIM ===
+# === Cambiando café ===
+# === Iniciar café ===
+# === Avanzando estados ===
+# Break key hit
+# Break in Module TestCoffeeController at C:/CoffeeMaker/TestCoffeeController.sv line 29
+# End time: 16:06:21 on Nov 14,2025, Elapsed time: 0:00:34
+# Errors: 0, Warnings: 1

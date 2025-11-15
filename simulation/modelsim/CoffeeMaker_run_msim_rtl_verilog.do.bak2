@@ -1,0 +1,22 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/LED_Animation.sv}
+vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/CoffeeFSM.sv}
+vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/ClockDivider.sv}
+vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/DisplayDecoder.sv}
+vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/CoffeeController.sv}
+vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/Debounce.sv}
+
+vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/TestCoffeeController.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  TestCoffeeController
+
+add wave *
+view structure
+view signals
+run -all

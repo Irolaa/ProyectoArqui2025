@@ -1,0 +1,18 @@
+module DisplayDecoder(
+    input  logic [3:0] char_sel,
+    output logic [6:0] segments
+);
+
+    always_comb begin
+        case (char_sel)
+            4'd0: segments = 7'b0000110; // E
+            4'd1: segments = 7'b1000111; // L
+            4'd2: segments = 7'b0001000; // C
+            4'd3: segments = 7'b0100001; // A
+            4'd4: segments = 7'b1000001; // U
+            4'd5: segments = 7'b0001110; // F (fin)
+            default: segments = 7'b1111111;
+        endcase
+    end
+
+endmodule
