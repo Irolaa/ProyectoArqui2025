@@ -1,5 +1,5 @@
 Fitter report for CoffeeMaker
-Fri Nov 14 18:05:44 2025
+Thu Nov 20 19:34:47 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Nov 14 18:05:44 2025       ;
+; Fitter Status                   ; Successful - Thu Nov 20 19:34:47 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CoffeeMaker                                 ;
 ; Top-level Entity Name           ; CoffeeController                            ;
@@ -1933,19 +1933,19 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X45_Y0 to location X55_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.46 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+Info (11888): Total time spent on timing analysis during the Fitter is 0.45 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info (144001): Generated suppressed messages file C:/CoffeeMaker/output_files/CoffeeMaker.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7334 megabytes
-    Info: Processing ended: Fri Nov 14 18:05:44 2025
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:01:43
+    Info: Peak virtual memory: 7339 megabytes
+    Info: Processing ended: Thu Nov 20 19:34:47 2025
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:01:50
 
 
 +----------------------------+

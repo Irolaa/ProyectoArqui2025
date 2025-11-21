@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "11/14/2025 18:05:58"
+// DATE "11/20/2025 19:35:00"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -36,13 +36,13 @@ module CoffeeController (
 	seg_type,
 	seg_state,
 	led);
-input 	logic clk ;
-input 	logic reset ;
-input 	logic next_button ;
-input 	logic select_button ;
-output 	logic [6:0] seg_type ;
-output 	logic [6:0] seg_state ;
-output 	logic [4:0] led ;
+input 	clk;
+input 	reset;
+input 	next_button;
+input 	select_button;
+output 	[6:0] seg_type;
+output 	[6:0] seg_state;
+output 	[4:0] led;
 
 // Design Ports Information
 // seg_type[0]	=>  Location: PIN_V25,	 I/O Standard: 2.5 V,	 Current Strength: Default

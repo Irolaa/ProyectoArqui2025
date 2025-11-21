@@ -1,7 +1,6 @@
 vendor_name = ModelSim
 source_file = 1, C:/CoffeeMaker/LED_Animation.sv
 source_file = 1, C:/CoffeeMaker/CoffeeFSM.sv
-source_file = 1, C:/CoffeeMaker/CoffeeMachine.sv
 source_file = 1, C:/CoffeeMaker/ClockDivider.sv
 source_file = 1, C:/CoffeeMaker/DisplayDecoder.sv
 source_file = 1, C:/CoffeeMaker/CoffeeController.sv

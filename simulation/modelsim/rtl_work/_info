@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/CoffeeMaker/simulation/modelsim
 vClockDivider
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1763157947
+Z2 !s110 1763688373
 !i10b 1
 !s100 3FKbZE6eilW@P6z][M[T:0
 IL<VcK8I1@OL[noC?mJT<`0
@@ -18,103 +18,103 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 ClockDivider_sv_unit
 S1
 R0
-w1763156302
+Z4 w1763165102
 8C:/CoffeeMaker/ClockDivider.sv
 FC:/CoffeeMaker/ClockDivider.sv
 L0 1
-Z4 OV;L;10.5b;63
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1763157946.000000
+Z6 !s108 1763688372.000000
 !s107 C:/CoffeeMaker/ClockDivider.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/CoffeeMaker|C:/CoffeeMaker/ClockDivider.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/CoffeeMaker
-Z8 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/CoffeeMaker
+Z9 tCvgOpt 0
 n@clock@divider
 vCoffeeController
 R1
 R2
 !i10b 1
-!s100 FH54A_RS15;e9kV548]>>2
-I<9XJ9D5jl5QBVbo4U0V8a0
+!s100 z>KjK310fKR@biK[AYKR@2
+I9EK1a=3PmoY^TTS_z^lEG0
 R3
 !s105 CoffeeController_sv_unit
 S1
 R0
-w1763156199
+w1763218642
 8C:/CoffeeMaker/CoffeeController.sv
 FC:/CoffeeMaker/CoffeeController.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-Z9 !s108 1763157947.000000
+Z10 !s108 1763688373.000000
 !s107 C:/CoffeeMaker/CoffeeController.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/CoffeeMaker|C:/CoffeeMaker/CoffeeController.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@coffee@controller
 vCoffeeFSM
 R1
-Z10 !s110 1763157946
+Z11 !s110 1763688372
 !i10b 1
-!s100 A42:gXVzT0=l>2khg>1B40
-IWe[9JfmJF7FbfFMzibOd<2
+!s100 >e?lHdF_Zi>8HCTL]KNUz1
+IjR258]IG_c9Q?Fnb>QGbc0
 R3
 !s105 CoffeeFSM_sv_unit
 S1
 R0
-w1763156587
+R4
 8C:/CoffeeMaker/CoffeeFSM.sv
 FC:/CoffeeMaker/CoffeeFSM.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/CoffeeMaker/CoffeeFSM.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/CoffeeMaker|C:/CoffeeMaker/CoffeeFSM.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@coffee@f@s@m
 vDisplayDecoder
 R1
 R2
 !i10b 1
-!s100 kfN4AnmgU=Kl1eCicmPb_1
-I=;n06^gjmHhknbQo^Fem_2
+!s100 HA9@hj2FQBBcbCEzo>3gZ0
+Ia`jJe[_bG<THbVH>RQZf93
 R3
 !s105 DisplayDecoder_sv_unit
 S1
 R0
-w1763153994
+w1763163905
 8C:/CoffeeMaker/DisplayDecoder.sv
 FC:/CoffeeMaker/DisplayDecoder.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R9
+R10
 !s107 C:/CoffeeMaker/DisplayDecoder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/CoffeeMaker|C:/CoffeeMaker/DisplayDecoder.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@display@decoder
 vLED_Animation
 R1
-R10
+R11
 !i10b 1
 !s100 ?c_3EDkF_MmOkzzihb4[W0
 ISFE1SkHlAghhIG2F:i>j^1
@@ -126,41 +126,41 @@ w1763153936
 8C:/CoffeeMaker/LED_Animation.sv
 FC:/CoffeeMaker/LED_Animation.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/CoffeeMaker/LED_Animation.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/CoffeeMaker|C:/CoffeeMaker/LED_Animation.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@l@e@d_@animation
 vTestCoffeeController
 R1
 R2
 !i10b 1
-!s100 l7:^RI_9iLjJ;g1en3m`V2
-I^a1RDYWDmaB>hmdSJ29=h2
+!s100 SofT8U[jTV=T2UnM9edN70
+I;1m9FD0mf3IP@1^a^@0k01
 R3
 !s105 TestCoffeeController_sv_unit
 S1
 R0
-w1763156290
+w1763688363
 8C:/CoffeeMaker/TestCoffeeController.sv
 FC:/CoffeeMaker/TestCoffeeController.sv
 L0 3
-R4
+R5
 r1
 !s85 0
 31
-R9
+R10
 !s107 C:/CoffeeMaker/TestCoffeeController.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/CoffeeMaker|C:/CoffeeMaker/TestCoffeeController.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@test@coffee@controller

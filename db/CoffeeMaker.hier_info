@@ -4,25 +4,25 @@ reset => reset.IN3
 next_button => always0.IN1
 next_button => prev_next.DATAIN
 select_button => s1.DATAIN
-seg_type[0] <= DisplayDecoder:dec_type.segments
-seg_type[1] <= DisplayDecoder:dec_type.segments
-seg_type[2] <= DisplayDecoder:dec_type.segments
-seg_type[3] <= DisplayDecoder:dec_type.segments
-seg_type[4] <= DisplayDecoder:dec_type.segments
-seg_type[5] <= DisplayDecoder:dec_type.segments
-seg_type[6] <= DisplayDecoder:dec_type.segments
-seg_state[0] <= DisplayDecoder:dec_state.segments
-seg_state[1] <= DisplayDecoder:dec_state.segments
-seg_state[2] <= DisplayDecoder:dec_state.segments
-seg_state[3] <= DisplayDecoder:dec_state.segments
-seg_state[4] <= DisplayDecoder:dec_state.segments
-seg_state[5] <= DisplayDecoder:dec_state.segments
-seg_state[6] <= DisplayDecoder:dec_state.segments
-led[0] <= LED_Animation:anim1.led
-led[1] <= LED_Animation:anim1.led
-led[2] <= LED_Animation:anim1.led
-led[3] <= LED_Animation:anim1.led
-led[4] <= LED_Animation:anim1.led
+seg_type[0] << DisplayDecoder:dec_type.segments
+seg_type[1] << DisplayDecoder:dec_type.segments
+seg_type[2] << DisplayDecoder:dec_type.segments
+seg_type[3] << DisplayDecoder:dec_type.segments
+seg_type[4] << DisplayDecoder:dec_type.segments
+seg_type[5] << DisplayDecoder:dec_type.segments
+seg_type[6] << DisplayDecoder:dec_type.segments
+seg_state[0] << DisplayDecoder:dec_state.segments
+seg_state[1] << DisplayDecoder:dec_state.segments
+seg_state[2] << DisplayDecoder:dec_state.segments
+seg_state[3] << DisplayDecoder:dec_state.segments
+seg_state[4] << DisplayDecoder:dec_state.segments
+seg_state[5] << DisplayDecoder:dec_state.segments
+seg_state[6] << DisplayDecoder:dec_state.segments
+led[0] << LED_Animation:anim1.led
+led[1] << LED_Animation:anim1.led
+led[2] << LED_Animation:anim1.led
+led[3] << LED_Animation:anim1.led
+led[4] << LED_Animation:anim1.led
 
 
 |CoffeeController|ClockDivider:div1
