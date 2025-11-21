@@ -1,6 +1,4 @@
-module Debounce #(
-    parameter DEBOUNCE_TIME = 500_000
-)(
+module Debounce (
     input  logic clk,
     input  logic reset,
     input  logic button_in,
@@ -9,6 +7,7 @@ module Debounce #(
 
     logic [19:0] counter;
     logic stable_state;
+    localparam DEBOUNCE_TIME = 500000;  
 
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin

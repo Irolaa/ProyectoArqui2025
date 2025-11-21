@@ -1,9 +1,8 @@
 |CoffeeController
-clk => clk.IN2
-reset => reset.IN3
-next_button => always0.IN1
-next_button => prev_next.DATAIN
-select_button => s1.DATAIN
+clk => clk.IN4
+reset => reset.IN5
+next_button => next_button.IN1
+select_button => select_button.IN1
 seg_type[0] << DisplayDecoder:dec_type.segments
 seg_type[1] << DisplayDecoder:dec_type.segments
 seg_type[2] << DisplayDecoder:dec_type.segments
@@ -23,6 +22,102 @@ led[1] << LED_Animation:anim1.led
 led[2] << LED_Animation:anim1.led
 led[3] << LED_Animation:anim1.led
 led[4] << LED_Animation:anim1.led
+
+
+|CoffeeController|Debounce:debounce_next
+clk => stable_state.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+reset => stable_state.ACLR
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+reset => counter[4].ACLR
+reset => counter[5].ACLR
+reset => counter[6].ACLR
+reset => counter[7].ACLR
+reset => counter[8].ACLR
+reset => counter[9].ACLR
+reset => counter[10].ACLR
+reset => counter[11].ACLR
+reset => counter[12].ACLR
+reset => counter[13].ACLR
+reset => counter[14].ACLR
+reset => counter[15].ACLR
+reset => counter[16].ACLR
+reset => counter[17].ACLR
+reset => counter[18].ACLR
+reset => counter[19].ACLR
+button_in => always0.IN1
+button_in => stable_state.DATAB
+button_out <= stable_state.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CoffeeController|Debounce:debounce_select
+clk => stable_state.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+reset => stable_state.ACLR
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+reset => counter[4].ACLR
+reset => counter[5].ACLR
+reset => counter[6].ACLR
+reset => counter[7].ACLR
+reset => counter[8].ACLR
+reset => counter[9].ACLR
+reset => counter[10].ACLR
+reset => counter[11].ACLR
+reset => counter[12].ACLR
+reset => counter[13].ACLR
+reset => counter[14].ACLR
+reset => counter[15].ACLR
+reset => counter[16].ACLR
+reset => counter[17].ACLR
+reset => counter[18].ACLR
+reset => counter[19].ACLR
+button_in => always0.IN1
+button_in => stable_state.DATAB
+button_out <= stable_state.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |CoffeeController|ClockDivider:div1
@@ -96,6 +191,7 @@ clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |CoffeeController|CoffeeFSM:fsm1
+clk => start_prev.CLK
 clk => done~reg0.CLK
 clk => timer[0].CLK
 clk => timer[1].CLK
@@ -103,6 +199,7 @@ clk => timer[2].CLK
 clk => current[0].CLK
 clk => current[1].CLK
 clk => current[2].CLK
+reset => start_prev.ACLR
 reset => done~reg0.ACLR
 reset => timer[0].ACLR
 reset => timer[1].ACLR
@@ -110,9 +207,8 @@ reset => timer[2].ACLR
 reset => current[0].ACLR
 reset => current[1].ACLR
 reset => current[2].ACLR
-start => next.OUTPUTSELECT
-start => next.OUTPUTSELECT
-start => next.OUTPUTSELECT
+start => always1.IN1
+start => start_prev.DATAIN
 coffee_sel[0] => Equal2.IN1
 coffee_sel[0] => Equal3.IN0
 coffee_sel[0] => Equal4.IN1

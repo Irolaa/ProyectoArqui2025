@@ -1,5 +1,5 @@
 Timing Analyzer report for CoffeeMaker
-Thu Nov 20 19:34:59 2025
+Thu Nov 20 21:35:59 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -99,22 +99,22 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.30        ;
+; Average used               ; 1.33        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.1%      ;
-;     Processor 3            ;   2.9%      ;
-;     Processor 4            ;   2.9%      ;
-;     Processor 5            ;   2.8%      ;
-;     Processor 6            ;   2.8%      ;
-;     Processor 7            ;   2.8%      ;
-;     Processor 8            ;   2.8%      ;
-;     Processor 9            ;   2.8%      ;
-;     Processor 10           ;   2.8%      ;
-;     Processor 11           ;   2.8%      ;
-;     Processor 12           ;   1.6%      ;
+;     Processor 2            ;   3.3%      ;
+;     Processor 3            ;   3.2%      ;
+;     Processor 4            ;   3.1%      ;
+;     Processor 5            ;   3.0%      ;
+;     Processor 6            ;   3.0%      ;
+;     Processor 7            ;   3.0%      ;
+;     Processor 8            ;   3.0%      ;
+;     Processor 9            ;   3.0%      ;
+;     Processor 10           ;   2.9%      ;
+;     Processor 11           ;   2.9%      ;
+;     Processor 12           ;   2.9%      ;
 +----------------------------+-------------+
 
 
@@ -134,9 +134,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note ;
 +------------+-----------------+-----------------------------+------+
-; 157.6 MHz  ; 157.6 MHz       ; clk                         ;      ;
-; 254.84 MHz ; 254.84 MHz      ; ClockDivider:div1|clk_out   ;      ;
-; 356.63 MHz ; 356.63 MHz      ; LED_Animation:anim1|div[23] ;      ;
+; 163.0 MHz  ; 163.0 MHz       ; clk                         ;      ;
+; 261.16 MHz ; 261.16 MHz      ; ClockDivider:div1|clk_out   ;      ;
+; 344.12 MHz ; 344.12 MHz      ; LED_Animation:anim1|div[23] ;      ;
 +------------+-----------------+-----------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -152,9 +152,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -5.517 ; -210.588      ;
-; ClockDivider:div1|clk_out   ; -5.403 ; -36.587       ;
-; LED_Animation:anim1|div[23] ; -1.804 ; -14.697       ;
+; ClockDivider:div1|clk_out   ; -5.820 ; -45.893       ;
+; clk                         ; -5.135 ; -363.671      ;
+; LED_Animation:anim1|div[23] ; -1.906 ; -13.967       ;
 +-----------------------------+--------+---------------+
 
 
@@ -163,9 +163,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; clk                         ; 0.284 ; 0.000         ;
-; LED_Animation:anim1|div[23] ; 0.408 ; 0.000         ;
-; ClockDivider:div1|clk_out   ; 0.708 ; 0.000         ;
+; clk                         ; 0.217 ; 0.000         ;
+; LED_Animation:anim1|div[23] ; 0.430 ; 0.000         ;
+; ClockDivider:div1|clk_out   ; 0.627 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -186,9 +186,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -0.793 ; -36.691       ;
-; LED_Animation:anim1|div[23] ; -0.394 ; -6.043        ;
-; ClockDivider:div1|clk_out   ; -0.394 ; -4.745        ;
+; clk                         ; -0.811 ; -62.562       ;
+; LED_Animation:anim1|div[23] ; -0.394 ; -5.583        ;
+; ClockDivider:div1|clk_out   ; -0.394 ; -4.920        ;
 +-----------------------------+--------+---------------+
 
 
@@ -203,9 +203,9 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note ;
 +------------+-----------------+-----------------------------+------+
-; 151.15 MHz ; 151.15 MHz      ; clk                         ;      ;
-; 254.32 MHz ; 254.32 MHz      ; ClockDivider:div1|clk_out   ;      ;
-; 359.32 MHz ; 359.32 MHz      ; LED_Animation:anim1|div[23] ;      ;
+; 156.57 MHz ; 156.57 MHz      ; clk                         ;      ;
+; 258.67 MHz ; 258.67 MHz      ; ClockDivider:div1|clk_out   ;      ;
+; 344.59 MHz ; 344.59 MHz      ; LED_Animation:anim1|div[23] ;      ;
 +------------+-----------------+-----------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -215,9 +215,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -5.616 ; -206.589      ;
-; ClockDivider:div1|clk_out   ; -5.556 ; -37.334       ;
-; LED_Animation:anim1|div[23] ; -1.783 ; -14.301       ;
+; ClockDivider:div1|clk_out   ; -5.907 ; -46.940       ;
+; clk                         ; -5.387 ; -356.155      ;
+; LED_Animation:anim1|div[23] ; -1.902 ; -13.766       ;
 +-----------------------------+--------+---------------+
 
 
@@ -226,9 +226,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; clk                         ; 0.331 ; 0.000         ;
-; LED_Animation:anim1|div[23] ; 0.450 ; 0.000         ;
-; ClockDivider:div1|clk_out   ; 0.697 ; 0.000         ;
+; clk                         ; 0.218 ; 0.000         ;
+; LED_Animation:anim1|div[23] ; 0.388 ; 0.000         ;
+; ClockDivider:div1|clk_out   ; 0.623 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -249,9 +249,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -0.810 ; -39.331       ;
-; LED_Animation:anim1|div[23] ; -0.394 ; -5.933        ;
-; ClockDivider:div1|clk_out   ; -0.394 ; -4.697        ;
+; clk                         ; -0.819 ; -67.237       ;
+; LED_Animation:anim1|div[23] ; -0.394 ; -5.460        ;
+; ClockDivider:div1|clk_out   ; -0.394 ; -4.882        ;
 +-----------------------------+--------+---------------+
 
 
@@ -266,21 +266,21 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -4.437 ; -109.810      ;
-; ClockDivider:div1|clk_out   ; -2.682 ; -18.395       ;
-; LED_Animation:anim1|div[23] ; -0.815 ; -6.334        ;
+; clk                         ; -4.081 ; -178.542      ;
+; ClockDivider:div1|clk_out   ; -2.938 ; -23.291       ;
+; LED_Animation:anim1|div[23] ; -0.891 ; -6.033        ;
 +-----------------------------+--------+---------------+
 
 
-+------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                   ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; LED_Animation:anim1|div[23] ; -0.041 ; -0.127        ;
-; clk                         ; 0.189  ; 0.000         ;
-; ClockDivider:div1|clk_out   ; 0.351  ; 0.000         ;
-+-----------------------------+--------+---------------+
++-----------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                  ;
++-----------------------------+-------+---------------+
+; Clock                       ; Slack ; End Point TNS ;
++-----------------------------+-------+---------------+
+; LED_Animation:anim1|div[23] ; 0.018 ; 0.000         ;
+; clk                         ; 0.181 ; 0.000         ;
+; ClockDivider:div1|clk_out   ; 0.297 ; 0.000         ;
++-----------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -300,9 +300,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -0.781 ; -8.142        ;
-; LED_Animation:anim1|div[23] ; 0.014  ; 0.000         ;
-; ClockDivider:div1|clk_out   ; 0.108  ; 0.000         ;
+; clk                         ; -0.740 ; -12.514       ;
+; ClockDivider:div1|clk_out   ; 0.042  ; 0.000         ;
+; LED_Animation:anim1|div[23] ; 0.058  ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -317,21 +317,21 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -3.793 ; -94.506       ;
-; ClockDivider:div1|clk_out   ; -2.581 ; -17.543       ;
-; LED_Animation:anim1|div[23] ; -0.707 ; -5.305        ;
+; clk                         ; -3.494 ; -153.556      ;
+; ClockDivider:div1|clk_out   ; -2.796 ; -22.291       ;
+; LED_Animation:anim1|div[23] ; -0.772 ; -5.019        ;
 +-----------------------------+--------+---------------+
 
 
-+------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                    ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; LED_Animation:anim1|div[23] ; -0.057 ; -0.216        ;
-; clk                         ; 0.183  ; 0.000         ;
-; ClockDivider:div1|clk_out   ; 0.317  ; 0.000         ;
-+-----------------------------+--------+---------------+
++-----------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                   ;
++-----------------------------+-------+---------------+
+; Clock                       ; Slack ; End Point TNS ;
++-----------------------------+-------+---------------+
+; LED_Animation:anim1|div[23] ; 0.000 ; 0.000         ;
+; clk                         ; 0.172 ; 0.000         ;
+; ClockDivider:div1|clk_out   ; 0.268 ; 0.000         ;
++-----------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -351,9 +351,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -0.744 ; -7.879        ;
-; LED_Animation:anim1|div[23] ; 0.048  ; 0.000         ;
-; ClockDivider:div1|clk_out   ; 0.123  ; 0.000         ;
+; clk                         ; -0.706 ; -12.365       ;
+; ClockDivider:div1|clk_out   ; 0.064  ; 0.000         ;
+; LED_Animation:anim1|div[23] ; 0.084  ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -363,20 +363,20 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                         ;
-+------------------------------+----------+--------+----------+---------+---------------------+
-; Clock                        ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack             ; -5.616   ; -0.057 ; N/A      ; N/A     ; -0.810              ;
-;  ClockDivider:div1|clk_out   ; -5.556   ; 0.317  ; N/A      ; N/A     ; -0.394              ;
-;  LED_Animation:anim1|div[23] ; -1.804   ; -0.057 ; N/A      ; N/A     ; -0.394              ;
-;  clk                         ; -5.616   ; 0.183  ; N/A      ; N/A     ; -0.810              ;
-; Design-wide TNS              ; -261.872 ; -0.216 ; 0.0      ; 0.0     ; -49.961             ;
-;  ClockDivider:div1|clk_out   ; -37.334  ; 0.000  ; N/A      ; N/A     ; -4.745              ;
-;  LED_Animation:anim1|div[23] ; -14.697  ; -0.216 ; N/A      ; N/A     ; -6.043              ;
-;  clk                         ; -210.588 ; 0.000  ; N/A      ; N/A     ; -39.331             ;
-+------------------------------+----------+--------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                        ;
++------------------------------+----------+-------+----------+---------+---------------------+
+; Clock                        ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack             ; -5.907   ; 0.000 ; N/A      ; N/A     ; -0.819              ;
+;  ClockDivider:div1|clk_out   ; -5.907   ; 0.268 ; N/A      ; N/A     ; -0.394              ;
+;  LED_Animation:anim1|div[23] ; -1.906   ; 0.000 ; N/A      ; N/A     ; -0.394              ;
+;  clk                         ; -5.387   ; 0.172 ; N/A      ; N/A     ; -0.819              ;
+; Design-wide TNS              ; -423.531 ; 0.0   ; 0.0      ; 0.0     ; -77.579             ;
+;  ClockDivider:div1|clk_out   ; -46.940  ; 0.000 ; N/A      ; N/A     ; -4.920              ;
+;  LED_Animation:anim1|div[23] ; -13.967  ; 0.000 ; N/A      ; N/A     ; -5.583              ;
+;  clk                         ; -363.671 ; 0.000 ; N/A      ; N/A     ; -67.237             ;
++------------------------------+----------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -531,11 +531,11 @@ No synchronizer chains to report.
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 ; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
-; clk                         ; clk                         ; 2270     ; 0        ; 0        ; 0        ;
+; clk                         ; clk                         ; 3835     ; 0        ; 0        ; 0        ;
 ; ClockDivider:div1|clk_out   ; clk                         ; 1        ; 1        ; 0        ; 0        ;
 ; LED_Animation:anim1|div[23] ; clk                         ; 1        ; 1        ; 0        ; 0        ;
-; clk                         ; ClockDivider:div1|clk_out   ; 116      ; 0        ; 0        ; 0        ;
-; ClockDivider:div1|clk_out   ; ClockDivider:div1|clk_out   ; 275      ; 0        ; 0        ; 0        ;
+; clk                         ; ClockDivider:div1|clk_out   ; 118      ; 0        ; 0        ; 0        ;
+; ClockDivider:div1|clk_out   ; ClockDivider:div1|clk_out   ; 295      ; 0        ; 0        ; 0        ;
 ; ClockDivider:div1|clk_out   ; LED_Animation:anim1|div[23] ; 5        ; 0        ; 0        ; 0        ;
 ; LED_Animation:anim1|div[23] ; LED_Animation:anim1|div[23] ; 52       ; 0        ; 0        ; 0        ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
@@ -547,11 +547,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 ; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
-; clk                         ; clk                         ; 2270     ; 0        ; 0        ; 0        ;
+; clk                         ; clk                         ; 3835     ; 0        ; 0        ; 0        ;
 ; ClockDivider:div1|clk_out   ; clk                         ; 1        ; 1        ; 0        ; 0        ;
 ; LED_Animation:anim1|div[23] ; clk                         ; 1        ; 1        ; 0        ; 0        ;
-; clk                         ; ClockDivider:div1|clk_out   ; 116      ; 0        ; 0        ; 0        ;
-; ClockDivider:div1|clk_out   ; ClockDivider:div1|clk_out   ; 275      ; 0        ; 0        ; 0        ;
+; clk                         ; ClockDivider:div1|clk_out   ; 118      ; 0        ; 0        ; 0        ;
+; ClockDivider:div1|clk_out   ; ClockDivider:div1|clk_out   ; 295      ; 0        ; 0        ; 0        ;
 ; ClockDivider:div1|clk_out   ; LED_Animation:anim1|div[23] ; 5        ; 0        ; 0        ; 0        ;
 ; LED_Animation:anim1|div[23] ; LED_Animation:anim1|div[23] ; 52       ; 0        ; 0        ; 0        ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
@@ -578,7 +578,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 91    ; 91   ;
+; Unconstrained Input Port Paths  ; 179   ; 179  ;
 ; Unconstrained Output Ports      ; 17    ; 17   ;
 ; Unconstrained Output Port Paths ; 34    ; 34   ;
 +---------------------------------+-------+------+
@@ -673,7 +673,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 20 19:34:54 2025
+    Info: Processing started: Thu Nov 20 21:35:55 2025
 Info: Command: quartus_sta CoffeeMaker -c CoffeeMaker
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -692,108 +692,108 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.517
+Info (332146): Worst-case setup slack is -5.820
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.517            -210.588 clk 
-    Info (332119):    -5.403             -36.587 ClockDivider:div1|clk_out 
-    Info (332119):    -1.804             -14.697 LED_Animation:anim1|div[23] 
-Info (332146): Worst-case hold slack is 0.284
+    Info (332119):    -5.820             -45.893 ClockDivider:div1|clk_out 
+    Info (332119):    -5.135            -363.671 clk 
+    Info (332119):    -1.906             -13.967 LED_Animation:anim1|div[23] 
+Info (332146): Worst-case hold slack is 0.217
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.284               0.000 clk 
-    Info (332119):     0.408               0.000 LED_Animation:anim1|div[23] 
-    Info (332119):     0.708               0.000 ClockDivider:div1|clk_out 
+    Info (332119):     0.217               0.000 clk 
+    Info (332119):     0.430               0.000 LED_Animation:anim1|div[23] 
+    Info (332119):     0.627               0.000 ClockDivider:div1|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.793
+Info (332146): Worst-case minimum pulse width slack is -0.811
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.793             -36.691 clk 
-    Info (332119):    -0.394              -6.043 LED_Animation:anim1|div[23] 
-    Info (332119):    -0.394              -4.745 ClockDivider:div1|clk_out 
+    Info (332119):    -0.811             -62.562 clk 
+    Info (332119):    -0.394              -5.583 LED_Animation:anim1|div[23] 
+    Info (332119):    -0.394              -4.920 ClockDivider:div1|clk_out 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.616
+Info (332146): Worst-case setup slack is -5.907
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.616            -206.589 clk 
-    Info (332119):    -5.556             -37.334 ClockDivider:div1|clk_out 
-    Info (332119):    -1.783             -14.301 LED_Animation:anim1|div[23] 
-Info (332146): Worst-case hold slack is 0.331
+    Info (332119):    -5.907             -46.940 ClockDivider:div1|clk_out 
+    Info (332119):    -5.387            -356.155 clk 
+    Info (332119):    -1.902             -13.766 LED_Animation:anim1|div[23] 
+Info (332146): Worst-case hold slack is 0.218
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.331               0.000 clk 
-    Info (332119):     0.450               0.000 LED_Animation:anim1|div[23] 
-    Info (332119):     0.697               0.000 ClockDivider:div1|clk_out 
+    Info (332119):     0.218               0.000 clk 
+    Info (332119):     0.388               0.000 LED_Animation:anim1|div[23] 
+    Info (332119):     0.623               0.000 ClockDivider:div1|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.810
+Info (332146): Worst-case minimum pulse width slack is -0.819
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.810             -39.331 clk 
-    Info (332119):    -0.394              -5.933 LED_Animation:anim1|div[23] 
-    Info (332119):    -0.394              -4.697 ClockDivider:div1|clk_out 
+    Info (332119):    -0.819             -67.237 clk 
+    Info (332119):    -0.394              -5.460 LED_Animation:anim1|div[23] 
+    Info (332119):    -0.394              -4.882 ClockDivider:div1|clk_out 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.437
+Info (332146): Worst-case setup slack is -4.081
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.437            -109.810 clk 
-    Info (332119):    -2.682             -18.395 ClockDivider:div1|clk_out 
-    Info (332119):    -0.815              -6.334 LED_Animation:anim1|div[23] 
-Info (332146): Worst-case hold slack is -0.041
+    Info (332119):    -4.081            -178.542 clk 
+    Info (332119):    -2.938             -23.291 ClockDivider:div1|clk_out 
+    Info (332119):    -0.891              -6.033 LED_Animation:anim1|div[23] 
+Info (332146): Worst-case hold slack is 0.018
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.041              -0.127 LED_Animation:anim1|div[23] 
-    Info (332119):     0.189               0.000 clk 
-    Info (332119):     0.351               0.000 ClockDivider:div1|clk_out 
+    Info (332119):     0.018               0.000 LED_Animation:anim1|div[23] 
+    Info (332119):     0.181               0.000 clk 
+    Info (332119):     0.297               0.000 ClockDivider:div1|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.781
+Info (332146): Worst-case minimum pulse width slack is -0.740
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.781              -8.142 clk 
-    Info (332119):     0.014               0.000 LED_Animation:anim1|div[23] 
-    Info (332119):     0.108               0.000 ClockDivider:div1|clk_out 
+    Info (332119):    -0.740             -12.514 clk 
+    Info (332119):     0.042               0.000 ClockDivider:div1|clk_out 
+    Info (332119):     0.058               0.000 LED_Animation:anim1|div[23] 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.793
+Info (332146): Worst-case setup slack is -3.494
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.793             -94.506 clk 
-    Info (332119):    -2.581             -17.543 ClockDivider:div1|clk_out 
-    Info (332119):    -0.707              -5.305 LED_Animation:anim1|div[23] 
-Info (332146): Worst-case hold slack is -0.057
+    Info (332119):    -3.494            -153.556 clk 
+    Info (332119):    -2.796             -22.291 ClockDivider:div1|clk_out 
+    Info (332119):    -0.772              -5.019 LED_Animation:anim1|div[23] 
+Info (332146): Worst-case hold slack is 0.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.057              -0.216 LED_Animation:anim1|div[23] 
-    Info (332119):     0.183               0.000 clk 
-    Info (332119):     0.317               0.000 ClockDivider:div1|clk_out 
+    Info (332119):     0.000               0.000 LED_Animation:anim1|div[23] 
+    Info (332119):     0.172               0.000 clk 
+    Info (332119):     0.268               0.000 ClockDivider:div1|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.744
+Info (332146): Worst-case minimum pulse width slack is -0.706
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.744              -7.879 clk 
-    Info (332119):     0.048               0.000 LED_Animation:anim1|div[23] 
-    Info (332119):     0.123               0.000 ClockDivider:div1|clk_out 
+    Info (332119):    -0.706             -12.365 clk 
+    Info (332119):     0.064               0.000 ClockDivider:div1|clk_out 
+    Info (332119):     0.084               0.000 LED_Animation:anim1|div[23] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5233 megabytes
-    Info: Processing ended: Thu Nov 20 19:34:59 2025
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 5238 megabytes
+    Info: Processing ended: Thu Nov 20 21:35:59 2025
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:05
 
 

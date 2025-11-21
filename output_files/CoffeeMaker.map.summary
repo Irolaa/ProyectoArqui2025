@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Nov 20 19:34:14 2025
+Analysis & Synthesis Status : Successful - Thu Nov 20 21:35:15 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : CoffeeMaker
 Top-level Entity Name : CoffeeController
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 79
+Total registers : 121
 Total pins : 23
 Total virtual pins : 0
 Total block memory bits : 0

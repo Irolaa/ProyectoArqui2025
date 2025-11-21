@@ -13,81 +13,92 @@ module CoffeeController(
     logic [2:0] state;
     logic done;
 
-  
-    logic next_p;
-    logic select_p;
 
-    assign next_p   = ~next_button;
-    assign select_p = ~select_button;
+    // DEBOUNCE SIMPLIFICADO
 
-    // ========================
+    logic next_debounced, select_debounced;
+    
+    Debounce debounce_next (
+        .clk(clk),
+        .reset(reset),
+        .button_in(next_button),
+        .button_out(next_debounced)
+    );
+    
+    Debounce debounce_select (
+        .clk(clk),
+        .reset(reset),
+        .button_in(select_button),
+        .button_out(select_debounced)
+    );
+
+    // Invertir botones
+    logic next_p, select_p;
+    assign next_p   = ~next_debounced;
+    assign select_p = ~select_debounced;
+
+
     // CAMBIO DE TIPO DE CAFÉ
-    // ========================
+
     logic prev_next;
 
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
-            coffee_sel <= 2'b00;   // empieza en Expreso
+            coffee_sel <= 2'b00;
             prev_next  <= 0;
         end else begin
-
-            // Flanco de subida
             if (next_p && !prev_next)
                 coffee_sel <= (coffee_sel == 2'b10) ? 2'b00 : coffee_sel + 1;
-
             prev_next <= next_p;
         end
     end
 
-    // ========================
+  
     // CLOCK DIVIDER 1 Hz
-    // ========================
-    ClockDivider #(.DIV(50_000_000)) div1 (
+
+    ClockDivider #(.DIV(50000000)) div1 (
         .clk(clk),
         .reset(reset),
         .clk_out(slow_clk)
     );
 
-    // ========================
-    // RESINCRONIZAR SELECT A 1 Hz
-    // ========================
-    logic s1, s2, start_sync;
+ 
+    // DETECTOR DE FLANCO 
 
+    logic select_prev, start_pulse;
+    
     always_ff @(posedge slow_clk or posedge reset) begin
         if (reset) begin
-            s1 <= 0;
-            s2 <= 0;
+            select_prev <= 0;
         end else begin
-            s1 <= select_p;
-            s2 <= s1;
+            select_prev <= select_p;
         end
     end
+    
+    assign start_pulse = select_p && !select_prev;
 
-    assign start_sync = s1 & ~s2; // flanco en slow clock
-
-    // ========================
+   
     // FSM PRINCIPAL
-    // ========================
+ 
     CoffeeFSM fsm1 (
         .clk(slow_clk),
         .reset(reset),
-        .start(start_sync),
+        .start(start_pulse),  
         .coffee_sel(coffee_sel),
         .state(state),
         .done(done)
     );
 
-    // ========================
     // DISPLAY TIPO DE CAFÉ
-    // ========================
+
     DisplayDecoder dec_type (
-        .char_sel(coffee_sel),  // 0=E, 1=L, 2=C
+        .char_sel(coffee_sel),
         .segments(seg_type)
     );
 
-    // ========================
-    // MAPEAR ESTADO -> LETRA
-    // ========================
+ 
+    // MAPEAR ESTADO
+
     logic [3:0] display_state;
 
     always_comb begin
@@ -102,17 +113,16 @@ module CoffeeController(
         endcase
     end
 
-    // ========================
+
     // DISPLAY ESTADO
-    // ========================
+
     DisplayDecoder dec_state (
         .char_sel(display_state),
         .segments(seg_state)
     );
 
-    // ========================
     // LED animation
-    // ========================
+
     LED_Animation anim1 (
         .clk(clk),
         .reset(reset),

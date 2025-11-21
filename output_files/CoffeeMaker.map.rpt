@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CoffeeMaker
-Thu Nov 20 19:34:14 2025
+Thu Nov 20 21:35:15 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,13 +46,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 20 19:34:14 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 20 21:35:15 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CoffeeMaker                                 ;
 ; Top-level Entity Name           ; CoffeeController                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 79                                          ;
+; Total registers                 ; 121                                         ;
 ; Total pins                      ; 23                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -166,21 +166,23 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                           ;
-+----------------------------------+-----------------+------------------------------+------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path       ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------+---------+
-; LED_Animation.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/CoffeeMaker/LED_Animation.sv    ;         ;
-; CoffeeFSM.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/CoffeeMaker/CoffeeFSM.sv        ;         ;
-; ClockDivider.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/CoffeeMaker/ClockDivider.sv     ;         ;
-; DisplayDecoder.sv                ; yes             ; User SystemVerilog HDL File  ; C:/CoffeeMaker/DisplayDecoder.sv   ;         ;
-; CoffeeController.sv              ; yes             ; User SystemVerilog HDL File  ; C:/CoffeeMaker/CoffeeController.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
+; LED_Animation.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv    ;         ;
+; CoffeeFSM.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM.sv        ;         ;
+; ClockDivider.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/ClockDivider.sv     ;         ;
+; DisplayDecoder.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/DisplayDecoder.sv   ;         ;
+; CoffeeController.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv ;         ;
+; Debounce.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/Debounce.sv         ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -188,25 +190,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 65          ;
+; Estimate of Logic utilization (ALMs needed) ; 93          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 114         ;
+; Combinational ALUT usage for logic          ; 168         ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 15          ;
-;     -- 5 input functions                    ; 8           ;
-;     -- 4 input functions                    ; 10          ;
-;     -- <=3 input functions                  ; 81          ;
+;     -- 6 input functions                    ; 18          ;
+;     -- 5 input functions                    ; 7           ;
+;     -- 4 input functions                    ; 17          ;
+;     -- <=3 input functions                  ; 126         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 79          ;
+; Dedicated logic registers                   ; 121         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 23          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 79          ;
-; Total fan-out                               ; 653         ;
-; Average fan-out                             ; 2.73        ;
+; Maximum fan-out                             ; 121         ;
+; Total fan-out                               ; 952         ;
+; Average fan-out                             ; 2.84        ;
 +---------------------------------------------+-------------+
 
 
@@ -215,9 +217,11 @@ refer to the applicable agreement for further details.
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name      ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+------------------+--------------+
-; |CoffeeController             ; 114 (4)             ; 79 (5)                    ; 0                 ; 0          ; 23   ; 0            ; |CoffeeController                          ; CoffeeController ; work         ;
+; |CoffeeController             ; 168 (5)             ; 121 (4)                   ; 0                 ; 0          ; 23   ; 0            ; |CoffeeController                          ; CoffeeController ; work         ;
 ;    |ClockDivider:div1|        ; 42 (42)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|ClockDivider:div1        ; ClockDivider     ; work         ;
-;    |CoffeeFSM:fsm1|           ; 25 (25)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|CoffeeFSM:fsm1           ; CoffeeFSM        ; work         ;
+;    |CoffeeFSM:fsm1|           ; 26 (26)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|CoffeeFSM:fsm1           ; CoffeeFSM        ; work         ;
+;    |Debounce:debounce_next|   ; 26 (26)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|Debounce:debounce_next   ; Debounce         ; work         ;
+;    |Debounce:debounce_select| ; 26 (26)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|Debounce:debounce_select ; Debounce         ; work         ;
 ;    |DisplayDecoder:dec_state| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|DisplayDecoder:dec_state ; DisplayDecoder   ; work         ;
 ;    |DisplayDecoder:dec_type|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|DisplayDecoder:dec_type  ; DisplayDecoder   ; work         ;
 ;    |LED_Animation:anim1|      ; 35 (35)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|LED_Animation:anim1      ; LED_Animation    ; work         ;
@@ -240,23 +244,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 79    ;
-; Number of registers using Synchronous Clear  ; 32    ;
+; Total registers                              ; 121   ;
+; Number of registers using Synchronous Clear  ; 72    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 79    ;
+; Number of registers using Asynchronous Clear ; 121   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 7     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 16:1               ; 5 bits    ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |CoffeeController|LED_Animation:anim1|led[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |CoffeeController|Debounce:debounce_next|counter[14]   ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |CoffeeController|Debounce:debounce_select|counter[16] ;
+; 16:1               ; 5 bits    ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |CoffeeController|LED_Animation:anim1|led[4]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -283,26 +289,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 79                          ;
-;     CLR               ; 40                          ;
-;     CLR SCLR          ; 32                          ;
+; arriav_ff             ; 121                         ;
+;     CLR               ; 42                          ;
+;     CLR SCLR          ; 72                          ;
 ;     ENA CLR           ; 7                           ;
-; arriav_lcell_comb     ; 120                         ;
-;     arith             ; 55                          ;
-;         1 data inputs ; 54                          ;
+; arriav_lcell_comb     ; 174                         ;
+;     arith             ; 95                          ;
+;         1 data inputs ; 94                          ;
 ;         2 data inputs ; 1                           ;
-;     normal            ; 65                          ;
+;     normal            ; 79                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 10                          ;
-;         5 data inputs ; 8                           ;
-;         6 data inputs ; 15                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 17                          ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 18                          ;
 ; boundary_port         ; 23                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.65                        ;
+; Average LUT depth     ; 2.63                        ;
 +-----------------------+-----------------------------+
 
 
@@ -321,49 +327,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 20 19:34:03 2025
+    Info: Processing started: Thu Nov 20 21:35:07 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CoffeeMaker -c CoffeeMaker
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file led_animation.sv
-    Info (12023): Found entity 1: LED_Animation File: C:/CoffeeMaker/LED_Animation.sv Line: 1
+    Info (12023): Found entity 1: LED_Animation File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file coffeefsm.sv
-    Info (12023): Found entity 1: CoffeeFSM File: C:/CoffeeMaker/CoffeeFSM.sv Line: 1
+    Info (12023): Found entity 1: CoffeeFSM File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clockdivider.sv
-    Info (12023): Found entity 1: ClockDivider File: C:/CoffeeMaker/ClockDivider.sv Line: 1
+    Info (12023): Found entity 1: ClockDivider File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/ClockDivider.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file displaydecoder.sv
-    Info (12023): Found entity 1: DisplayDecoder File: C:/CoffeeMaker/DisplayDecoder.sv Line: 1
+    Info (12023): Found entity 1: DisplayDecoder File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/DisplayDecoder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file coffeecontroller.sv
-    Info (12023): Found entity 1: CoffeeController File: C:/CoffeeMaker/CoffeeController.sv Line: 1
+    Info (12023): Found entity 1: CoffeeController File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file debounce.sv
-    Info (12023): Found entity 1: Debounce File: C:/CoffeeMaker/Debounce.sv Line: 1
+    Info (12023): Found entity 1: Debounce File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/Debounce.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testcoffeecontroller.sv
-    Info (12023): Found entity 1: TestCoffeeController File: C:/CoffeeMaker/TestCoffeeController.sv Line: 3
+    Info (12023): Found entity 1: TestCoffeeController File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestCoffeeController.sv Line: 3
 Info (12127): Elaborating entity "CoffeeController" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at CoffeeController.sv(36): truncated value with size 32 to match size of target (2) File: C:/CoffeeMaker/CoffeeController.sv Line: 36
-Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:div1" File: C:/CoffeeMaker/CoffeeController.sv Line: 49
-Info (12128): Elaborating entity "CoffeeFSM" for hierarchy "CoffeeFSM:fsm1" File: C:/CoffeeMaker/CoffeeController.sv Line: 78
-Warning (10230): Verilog HDL assignment warning at CoffeeFSM.sv(78): truncated value with size 32 to match size of target (3) File: C:/CoffeeMaker/CoffeeFSM.sv Line: 78
-Info (12128): Elaborating entity "DisplayDecoder" for hierarchy "DisplayDecoder:dec_type" File: C:/CoffeeMaker/CoffeeController.sv Line: 86
-Info (12128): Elaborating entity "LED_Animation" for hierarchy "LED_Animation:anim1" File: C:/CoffeeMaker/CoffeeController.sv Line: 121
-Warning (10230): Verilog HDL assignment warning at LED_Animation.sv(18): truncated value with size 32 to match size of target (26) File: C:/CoffeeMaker/LED_Animation.sv Line: 18
-Warning (10230): Verilog HDL assignment warning at LED_Animation.sv(32): truncated value with size 32 to match size of target (4) File: C:/CoffeeMaker/LED_Animation.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at CoffeeController.sv(51): truncated value with size 32 to match size of target (2) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 51
+Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:debounce_next" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at Debounce.sv(17): truncated value with size 32 to match size of target (20) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/Debounce.sv Line: 17
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:div1" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 63
+Info (12128): Elaborating entity "CoffeeFSM" for hierarchy "CoffeeFSM:fsm1" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 90
+Warning (10230): Verilog HDL assignment warning at CoffeeFSM.sv(70): truncated value with size 32 to match size of target (3) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM.sv Line: 70
+Info (12128): Elaborating entity "DisplayDecoder" for hierarchy "DisplayDecoder:dec_type" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 97
+Info (12128): Elaborating entity "LED_Animation" for hierarchy "LED_Animation:anim1" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 131
+Warning (10230): Verilog HDL assignment warning at LED_Animation.sv(18): truncated value with size 32 to match size of target (26) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at LED_Animation.sv(32): truncated value with size 32 to match size of target (4) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv Line: 32
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seg_type[4]" is stuck at GND File: C:/CoffeeMaker/CoffeeController.sv Line: 6
-    Warning (13410): Pin "seg_type[5]" is stuck at GND File: C:/CoffeeMaker/CoffeeController.sv Line: 6
+    Warning (13410): Pin "seg_type[4]" is stuck at GND File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 6
+    Warning (13410): Pin "seg_type[5]" is stuck at GND File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 6
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 141 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 194 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 118 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4895 megabytes
-    Info: Processing ended: Thu Nov 20 19:34:14 2025
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21061): Implemented 171 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4889 megabytes
+    Info: Processing ended: Thu Nov 20 21:35:15 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 
