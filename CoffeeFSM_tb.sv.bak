@@ -1,0 +1,96 @@
+`timescale 1ns/1ps
+
+module CoffeeFSM_tb;
+
+    // Señales del DUT
+    logic clk;
+    logic reset;
+    logic start;
+    logic [1:0] coffee_sel;
+    logic [2:0] state;
+    logic done;
+
+    // Instancia del módulo
+    CoffeeFSM dut (
+        .clk(clk),
+        .reset(reset),
+        .start(start),
+        .coffee_sel(coffee_sel),
+        .state(state),
+        .done(done)
+    );
+
+    // ===============================
+    // Reloj de 10ns (100MHz)
+    // ===============================
+    always #5 clk = ~clk;
+
+    // ===============================
+    // Tarea para imprimir estados
+    // ===============================
+    task print_status;
+        $display("[%0t] state=%0d  done=%0b  sel=%b  timer? (ver en waves)",
+                 $time, state, done, coffee_sel);
+    endtask
+
+    // ===============================
+    // Tarea: ejecutar una preparación
+    // ===============================
+    task make_coffee(input [1:0] sel);
+        begin
+            coffee_sel = sel;
+
+            // Pulso de start
+            @(negedge clk);
+            start = 1;
+            @(negedge clk);
+            start = 0;
+
+            $display("\n=== Iniciando café sel=%b ===", sel);
+
+            // Esperar hasta done
+            wait(done == 1);
+            print_status();
+
+            // Esperar un ciclo para que regrese a IDLE
+            @(posedge clk);
+            print_status();
+        end
+    endtask
+
+
+    // ===============================
+    // Test principal
+    // ===============================
+    initial begin
+        // Inicialización
+        clk = 0;
+        reset = 1;
+        start = 0;
+        coffee_sel = 2'b00;
+
+        // Reset
+        $display("Aplicando reset...");
+        repeat(2) @(posedge clk);
+        reset = 0;
+
+        // ===============================
+        // SIMULACIÓN 1: Expreso (00)
+        // ===============================
+        make_coffee(2'b00);
+
+        // Esperar unos ciclos
+        repeat(5) @(posedge clk);
+
+        // ===============================
+        // SIMULACIÓN 2: Capuchino (10)
+        // ===============================
+        make_coffee(2'b10);
+
+        repeat(10) @(posedge clk);
+
+        $display("\nSimulación finalizada.");
+        $stop;
+    end
+
+endmodule

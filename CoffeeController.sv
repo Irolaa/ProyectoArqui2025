@@ -14,7 +14,7 @@ module CoffeeController(
     logic done;
 
 
-    // DEBOUNCE SIMPLIFICADO
+    // DEBOUNCE
 
     logic next_debounced, select_debounced;
     
@@ -32,7 +32,6 @@ module CoffeeController(
         .button_out(select_debounced)
     );
 
-    // Invertir botones
     logic next_p, select_p;
     assign next_p   = ~next_debounced;
     assign select_p = ~select_debounced;
@@ -54,7 +53,7 @@ module CoffeeController(
     end
 
   
-    // CLOCK DIVIDER 1 Hz
+    // CLOCK DIVIDER 1 Hz 
 
     ClockDivider #(.DIV(50000000)) div1 (
         .clk(clk),
@@ -78,10 +77,10 @@ module CoffeeController(
     assign start_pulse = select_p && !select_prev;
 
    
-    // FSM PRINCIPAL
+    // FSM 
  
     CoffeeFSM fsm1 (
-        .clk(slow_clk),
+        .clk(clk),  
         .reset(reset),
         .start(start_pulse),  
         .coffee_sel(coffee_sel),

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CoffeeMaker
-Thu Nov 20 21:35:15 2025
+Fri Nov 21 19:49:09 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,13 +46,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 20 21:35:15 2025       ;
+; Analysis & Synthesis Status     ; Successful - Fri Nov 21 19:49:09 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CoffeeMaker                                 ;
 ; Top-level Entity Name           ; CoffeeController                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 121                                         ;
+; Total registers                 ; 182                                         ;
 ; Total pins                      ; 23                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -190,25 +190,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 93          ;
+; Estimate of Logic utilization (ALMs needed) ; 159         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 168         ;
+; Combinational ALUT usage for logic          ; 274         ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 18          ;
-;     -- 5 input functions                    ; 7           ;
+;     -- 6 input functions                    ; 44          ;
+;     -- 5 input functions                    ; 18          ;
 ;     -- 4 input functions                    ; 17          ;
-;     -- <=3 input functions                  ; 126         ;
+;     -- <=3 input functions                  ; 195         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 121         ;
+; Dedicated logic registers                   ; 182         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 23          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 121         ;
-; Total fan-out                               ; 952         ;
-; Average fan-out                             ; 2.84        ;
+; Maximum fan-out                             ; 182         ;
+; Total fan-out                               ; 1581        ;
+; Average fan-out                             ; 3.15        ;
 +---------------------------------------------+-------------+
 
 
@@ -217,12 +217,12 @@ refer to the applicable agreement for further details.
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name      ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+------------------+--------------+
-; |CoffeeController             ; 168 (5)             ; 121 (4)                   ; 0                 ; 0          ; 23   ; 0            ; |CoffeeController                          ; CoffeeController ; work         ;
-;    |ClockDivider:div1|        ; 42 (42)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|ClockDivider:div1        ; ClockDivider     ; work         ;
-;    |CoffeeFSM:fsm1|           ; 26 (26)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|CoffeeFSM:fsm1           ; CoffeeFSM        ; work         ;
+; |CoffeeController             ; 274 (6)             ; 182 (4)                   ; 0                 ; 0          ; 23   ; 0            ; |CoffeeController                          ; CoffeeController ; work         ;
+;    |ClockDivider:div1|        ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|ClockDivider:div1        ; ClockDivider     ; work         ;
+;    |CoffeeFSM:fsm1|           ; 131 (131)           ; 69 (69)                   ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|CoffeeFSM:fsm1           ; CoffeeFSM        ; work         ;
 ;    |Debounce:debounce_next|   ; 26 (26)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|Debounce:debounce_next   ; Debounce         ; work         ;
 ;    |Debounce:debounce_select| ; 26 (26)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|Debounce:debounce_select ; Debounce         ; work         ;
-;    |DisplayDecoder:dec_state| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|DisplayDecoder:dec_state ; DisplayDecoder   ; work         ;
+;    |DisplayDecoder:dec_state| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|DisplayDecoder:dec_state ; DisplayDecoder   ; work         ;
 ;    |DisplayDecoder:dec_type|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|DisplayDecoder:dec_type  ; DisplayDecoder   ; work         ;
 ;    |LED_Animation:anim1|      ; 35 (35)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |CoffeeController|LED_Animation:anim1      ; LED_Animation    ; work         ;
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+------------------+--------------+
@@ -244,25 +244,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 121   ;
-; Number of registers using Synchronous Clear  ; 72    ;
+; Total registers                              ; 182   ;
+; Number of registers using Synchronous Clear  ; 136   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 121   ;
+; Number of registers using Asynchronous Clear ; 182   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Clock Enable       ; 39    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |CoffeeController|Debounce:debounce_next|counter[14]   ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |CoffeeController|Debounce:debounce_select|counter[16] ;
-; 16:1               ; 5 bits    ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |CoffeeController|LED_Animation:anim1|led[4]           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |CoffeeController|Debounce:debounce_next|counter[2]   ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |CoffeeController|Debounce:debounce_select|counter[8] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |CoffeeController|CoffeeFSM:fsm1|timer[6]             ;
+; 16:1               ; 5 bits    ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |CoffeeController|LED_Animation:anim1|led[2]          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -289,26 +290,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 121                         ;
-;     CLR               ; 42                          ;
-;     CLR SCLR          ; 72                          ;
+; arriav_ff             ; 182                         ;
+;     CLR               ; 39                          ;
+;     CLR SCLR          ; 104                         ;
 ;     ENA CLR           ; 7                           ;
-; arriav_lcell_comb     ; 174                         ;
-;     arith             ; 95                          ;
-;         1 data inputs ; 94                          ;
+;     ENA CLR SCLR      ; 32                          ;
+; arriav_lcell_comb     ; 280                         ;
+;     arith             ; 159                         ;
+;         1 data inputs ; 158                         ;
 ;         2 data inputs ; 1                           ;
-;     normal            ; 79                          ;
+;     normal            ; 121                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 13                          ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 16                          ;
 ;         4 data inputs ; 17                          ;
-;         5 data inputs ; 7                           ;
-;         6 data inputs ; 18                          ;
+;         5 data inputs ; 18                          ;
+;         6 data inputs ; 44                          ;
 ; boundary_port         ; 23                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.63                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.26                        ;
 +-----------------------+-----------------------------+
 
 
@@ -327,7 +329,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 20 21:35:07 2025
+    Info: Processing started: Fri Nov 21 19:48:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CoffeeMaker -c CoffeeMaker
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -345,15 +347,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file debounc
     Info (12023): Found entity 1: Debounce File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/Debounce.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testcoffeecontroller.sv
     Info (12023): Found entity 1: TestCoffeeController File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestCoffeeController.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file coffeefsm_tb.sv
+    Info (12023): Found entity 1: CoffeeFSM_tb File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb.sv Line: 3
 Info (12127): Elaborating entity "CoffeeController" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at CoffeeController.sv(51): truncated value with size 32 to match size of target (2) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at CoffeeController.sv(50): truncated value with size 32 to match size of target (2) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 50
 Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:debounce_next" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 26
 Warning (10230): Verilog HDL assignment warning at Debounce.sv(17): truncated value with size 32 to match size of target (20) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/Debounce.sv Line: 17
-Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:div1" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 63
-Info (12128): Elaborating entity "CoffeeFSM" for hierarchy "CoffeeFSM:fsm1" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 90
-Warning (10230): Verilog HDL assignment warning at CoffeeFSM.sv(70): truncated value with size 32 to match size of target (3) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM.sv Line: 70
-Info (12128): Elaborating entity "DisplayDecoder" for hierarchy "DisplayDecoder:dec_type" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 97
-Info (12128): Elaborating entity "LED_Animation" for hierarchy "LED_Animation:anim1" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 131
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:div1" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 62
+Info (12128): Elaborating entity "CoffeeFSM" for hierarchy "CoffeeFSM:fsm1" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 89
+Info (12128): Elaborating entity "DisplayDecoder" for hierarchy "DisplayDecoder:dec_type" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 96
+Info (12128): Elaborating entity "LED_Animation" for hierarchy "LED_Animation:anim1" File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv Line: 130
 Warning (10230): Verilog HDL assignment warning at LED_Animation.sv(18): truncated value with size 32 to match size of target (26) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv Line: 18
 Warning (10230): Verilog HDL assignment warning at LED_Animation.sv(32): truncated value with size 32 to match size of target (4) File: C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv Line: 32
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -364,14 +367,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 194 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 299 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 171 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4889 megabytes
-    Info: Processing ended: Thu Nov 20 21:35:15 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+    Info (21061): Implemented 276 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4892 megabytes
+    Info: Processing ended: Fri Nov 21 19:49:09 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 

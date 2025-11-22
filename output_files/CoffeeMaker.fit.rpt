@@ -1,5 +1,5 @@
 Fitter report for CoffeeMaker
-Thu Nov 20 21:35:47 2025
+Fri Nov 21 19:49:52 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,15 +62,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Nov 20 21:35:47 2025       ;
+; Fitter Status                   ; Successful - Fri Nov 21 19:49:52 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CoffeeMaker                                 ;
 ; Top-level Entity Name           ; CoffeeController                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 94 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 137                                         ;
+; Logic utilization (in ALMs)     ; 158 / 32,070 ( < 1 % )                      ;
+; Total registers                 ; 208                                         ;
 ; Total pins                      ; 23 / 457 ( 5 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -157,17 +157,17 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.5%      ;
 ;     Processor 3            ;   0.4%      ;
 ;     Processor 4            ;   0.4%      ;
-;     Processor 5            ;   0.3%      ;
-;     Processor 6            ;   0.3%      ;
-;     Processor 7            ;   0.3%      ;
-;     Processor 8            ;   0.3%      ;
-;     Processor 9            ;   0.3%      ;
-;     Processor 10           ;   0.3%      ;
-;     Processor 11           ;   0.3%      ;
-;     Processor 12           ;   0.3%      ;
+;     Processor 5            ;   0.4%      ;
+;     Processor 6            ;   0.4%      ;
+;     Processor 7            ;   0.4%      ;
+;     Processor 8            ;   0.4%      ;
+;     Processor 9            ;   0.4%      ;
+;     Processor 10           ;   0.4%      ;
+;     Processor 11           ;   0.4%      ;
+;     Processor 12           ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -177,22 +177,33 @@ refer to the applicable agreement for further details.
 ; Node                          ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                        ; Destination Port ; Destination Port Name ;
 +-------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------+------------------+-----------------------+
 ; clk~inputCLKENA0              ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                         ;                  ;                       ;
+; reset~inputCLKENA0            ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                         ;                  ;                       ;
 ; ClockDivider:div1|counter[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[1]~DUPLICATE  ;                  ;                       ;
+; ClockDivider:div1|counter[2]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[2]~DUPLICATE  ;                  ;                       ;
+; ClockDivider:div1|counter[3]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[3]~DUPLICATE  ;                  ;                       ;
 ; ClockDivider:div1|counter[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[4]~DUPLICATE  ;                  ;                       ;
-; ClockDivider:div1|counter[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[6]~DUPLICATE  ;                  ;                       ;
+; ClockDivider:div1|counter[5]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[5]~DUPLICATE  ;                  ;                       ;
 ; ClockDivider:div1|counter[8]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[8]~DUPLICATE  ;                  ;                       ;
+; ClockDivider:div1|counter[9]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[9]~DUPLICATE  ;                  ;                       ;
 ; ClockDivider:div1|counter[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[12]~DUPLICATE ;                  ;                       ;
 ; ClockDivider:div1|counter[13] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[13]~DUPLICATE ;                  ;                       ;
-; ClockDivider:div1|counter[14] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[14]~DUPLICATE ;                  ;                       ;
-; ClockDivider:div1|counter[15] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[15]~DUPLICATE ;                  ;                       ;
-; ClockDivider:div1|counter[19] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[19]~DUPLICATE ;                  ;                       ;
-; ClockDivider:div1|counter[20] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[20]~DUPLICATE ;                  ;                       ;
-; ClockDivider:div1|counter[24] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[24]~DUPLICATE ;                  ;                       ;
+; ClockDivider:div1|counter[17] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[17]~DUPLICATE ;                  ;                       ;
+; ClockDivider:div1|counter[18] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[18]~DUPLICATE ;                  ;                       ;
+; ClockDivider:div1|counter[21] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[21]~DUPLICATE ;                  ;                       ;
+; ClockDivider:div1|counter[23] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[23]~DUPLICATE ;                  ;                       ;
 ; ClockDivider:div1|counter[25] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[25]~DUPLICATE ;                  ;                       ;
 ; ClockDivider:div1|counter[26] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[26]~DUPLICATE ;                  ;                       ;
-; ClockDivider:div1|counter[27] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[27]~DUPLICATE ;                  ;                       ;
-; ClockDivider:div1|counter[29] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[29]~DUPLICATE ;                  ;                       ;
-; ClockDivider:div1|counter[31] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ClockDivider:div1|counter[31]~DUPLICATE ;                  ;                       ;
+; CoffeeFSM:fsm1|current[1]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; CoffeeFSM:fsm1|current[1]~DUPLICATE     ;                  ;                       ;
+; CoffeeFSM:fsm1|current[2]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; CoffeeFSM:fsm1|current[2]~DUPLICATE     ;                  ;                       ;
+; CoffeeFSM:fsm1|end_timer[9]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; CoffeeFSM:fsm1|end_timer[9]~DUPLICATE   ;                  ;                       ;
+; CoffeeFSM:fsm1|end_timer[10]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; CoffeeFSM:fsm1|end_timer[10]~DUPLICATE  ;                  ;                       ;
+; CoffeeFSM:fsm1|end_timer[16]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; CoffeeFSM:fsm1|end_timer[16]~DUPLICATE  ;                  ;                       ;
+; CoffeeFSM:fsm1|end_timer[18]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; CoffeeFSM:fsm1|end_timer[18]~DUPLICATE  ;                  ;                       ;
+; CoffeeFSM:fsm1|end_timer[21]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; CoffeeFSM:fsm1|end_timer[21]~DUPLICATE  ;                  ;                       ;
+; CoffeeFSM:fsm1|end_timer[23]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; CoffeeFSM:fsm1|end_timer[23]~DUPLICATE  ;                  ;                       ;
+; CoffeeFSM:fsm1|end_timer[26]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; CoffeeFSM:fsm1|end_timer[26]~DUPLICATE  ;                  ;                       ;
+; coffee_sel[0]                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; coffee_sel[0]~DUPLICATE                 ;                  ;                       ;
+; coffee_sel[1]                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; coffee_sel[1]~DUPLICATE                 ;                  ;                       ;
 +-------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------+------------------+-----------------------+
 
 
@@ -202,8 +213,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 337 ) ; 0.00 % ( 0 / 337 )         ; 0.00 % ( 0 / 337 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 337 ) ; 0.00 % ( 0 / 337 )         ; 0.00 % ( 0 / 337 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 505 ) ; 0.00 % ( 0 / 505 )         ; 0.00 % ( 0 / 505 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 505 ) ; 0.00 % ( 0 / 505 )         ; 0.00 % ( 0 / 505 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -226,7 +237,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 337 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 505 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -242,41 +253,41 @@ The pin-out file can be found in C:/Users/irola/OneDrive/Escritorio/ProyectoArqu
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 94 / 32,070        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 94                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 101 / 32,070       ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 49                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 40                 ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 158 / 32,070       ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 158                ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 168 / 32,070       ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 80                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 76                 ;       ;
 ;         [c] ALMs used for registers                         ; 12                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 32,070         ; < 1 % ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 32,070        ; < 1 % ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 32,070         ; < 1 % ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
-;         [c] Due to LAB input limits                         ; 0                  ;       ;
+;         [c] Due to LAB input limits                         ; 1                  ;       ;
 ;         [d] Due to virtual I/Os                             ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 17 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 17                 ;       ;
+; Total LABs:  partially or completely used                   ; 25 / 3,207         ; < 1 % ;
+;     -- Logic LABs                                           ; 25                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 169                ;       ;
+; Combinational ALUT usage for logic                          ; 275                ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 18                 ;       ;
-;     -- 5 input functions                                    ; 7                  ;       ;
+;     -- 6 input functions                                    ; 44                 ;       ;
+;     -- 5 input functions                                    ; 18                 ;       ;
 ;     -- 4 input functions                                    ; 17                 ;       ;
-;     -- <=3 input functions                                  ; 127                ;       ;
-; Combinational ALUT usage for route-throughs                 ; 6                  ;       ;
+;     -- <=3 input functions                                  ; 196                ;       ;
+; Combinational ALUT usage for route-throughs                 ; 5                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 137                ;       ;
+; Dedicated logic registers                                   ; 208                ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 121 / 64,140       ; < 1 % ;
-;         -- Secondary logic registers                        ; 16 / 64,140        ; < 1 % ;
+;         -- Primary logic registers                          ; 182 / 64,140       ; < 1 % ;
+;         -- Secondary logic registers                        ; 26 / 64,140        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 121                ;       ;
-;         -- Routing optimization registers                   ; 16                 ;       ;
+;         -- Design implementation registers                  ; 182                ;       ;
+;         -- Routing optimization registers                   ; 26                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 23 / 457           ; 5 %   ;
@@ -318,8 +329,8 @@ The pin-out file can be found in C:/Users/irola/OneDrive/Escritorio/ProyectoArqu
 ; Total DSP Blocks                                            ; 0 / 87             ; 0 %   ;
 ;                                                             ;                    ;       ;
 ; Fractional PLLs                                             ; 0 / 6              ; 0 %   ;
-; Global signals                                              ; 1                  ;       ;
-;     -- Global clocks                                        ; 1 / 16             ; 6 %   ;
+; Global signals                                              ; 2                  ;       ;
+;     -- Global clocks                                        ; 2 / 16             ; 13 %  ;
 ;     -- Quadrant clocks                                      ; 0 / 66             ; 0 %   ;
 ;     -- Horizontal periphery clocks                          ; 0 / 18             ; 0 %   ;
 ; SERDES Transmitters                                         ; 0 / 100            ; 0 %   ;
@@ -331,12 +342,12 @@ The pin-out file can be found in C:/Users/irola/OneDrive/Escritorio/ProyectoArqu
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.1% / 0.2% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 3.1% / 3.3% / 2.5% ;       ;
-; Maximum fan-out                                             ; 137                ;       ;
-; Highest non-global fan-out                                  ; 137                ;       ;
-; Total fan-out                                               ; 1023               ;       ;
-; Average fan-out                                             ; 2.85               ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.2% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 2.1% / 2.2% / 1.5% ;       ;
+; Maximum fan-out                                             ; 206                ;       ;
+; Highest non-global fan-out                                  ; 48                 ;       ;
+; Total fan-out                                               ; 1690               ;       ;
+; Average fan-out                                             ; 3.15               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -345,44 +356,44 @@ The pin-out file can be found in C:/Users/irola/OneDrive/Escritorio/ProyectoArqu
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 94 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 94                    ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 101 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 49                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 40                    ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 158 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 158                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 168 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 80                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 76                    ; 0                              ;
 ;         [c] ALMs used for registers                         ; 12                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 32070 ( < 1 % )   ; 0 / 32070 ( 0 % )              ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )     ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 32070 ( < 1 % )   ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
-;         [c] Due to LAB input limits                         ; 0                     ; 0                              ;
+;         [c] Due to LAB input limits                         ; 1                     ; 0                              ;
 ;         [d] Due to virtual I/Os                             ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 17 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 17                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 25 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 25                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 169                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 275                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                     ; 0                              ;
-;     -- 6 input functions                                    ; 18                    ; 0                              ;
-;     -- 5 input functions                                    ; 7                     ; 0                              ;
+;     -- 6 input functions                                    ; 44                    ; 0                              ;
+;     -- 5 input functions                                    ; 18                    ; 0                              ;
 ;     -- 4 input functions                                    ; 17                    ; 0                              ;
-;     -- <=3 input functions                                  ; 127                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 6                     ; 0                              ;
+;     -- <=3 input functions                                  ; 196                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 5                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 121 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 16 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
+;         -- Primary logic registers                          ; 182 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 26 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 121                   ; 0                              ;
-;         -- Routing optimization registers                   ; 16                    ; 0                              ;
+;         -- Design implementation registers                  ; 182                   ; 0                              ;
+;         -- Routing optimization registers                   ; 26                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -390,7 +401,7 @@ The pin-out file can be found in C:/Users/irola/OneDrive/Escritorio/ProyectoArqu
 ; I/O registers                                               ; 0                     ; 0                              ;
 ; Total block memory bits                                     ; 0                     ; 0                              ;
 ; Total block memory implementation bits                      ; 0                     ; 0                              ;
-; Clock enable block                                          ; 1 / 116 ( < 1 % )     ; 0 / 116 ( 0 % )                ;
+; Clock enable block                                          ; 2 / 116 ( 1 % )       ; 0 / 116 ( 0 % )                ;
 ;                                                             ;                       ;                                ;
 ; Connections                                                 ;                       ;                                ;
 ;     -- Input Connections                                    ; 0                     ; 0                              ;
@@ -399,8 +410,8 @@ The pin-out file can be found in C:/Users/irola/OneDrive/Escritorio/ProyectoArqu
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 1023                  ; 0                              ;
-;     -- Registered Connections                               ; 342                   ; 0                              ;
+;     -- Total Connections                                    ; 1690                  ; 0                              ;
+;     -- Registered Connections                               ; 526                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -432,9 +443,9 @@ The pin-out file can be found in C:/Users/irola/OneDrive/Escritorio/ProyectoArqu
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clk           ; K14   ; 8A       ; 32           ; 81           ; 0            ; 118                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clk           ; K14   ; 8A       ; 32           ; 81           ; 0            ; 197                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; next_button   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; reset         ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 137                   ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; reset         ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 208                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; select_button ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
@@ -1429,14 +1440,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node    ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name      ; Library Name ;
 +-------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------+------------------+--------------+
-; |CoffeeController             ; 93.5 (2.8)           ; 100.5 (3.3)                      ; 7.0 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 169 (6)             ; 137 (4)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 23   ; 0            ; |CoffeeController                          ; CoffeeController ; work         ;
-;    |ClockDivider:div1|        ; 23.3 (23.3)          ; 24.0 (24.0)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (42)             ; 49 (49)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|ClockDivider:div1        ; ClockDivider     ; work         ;
-;    |CoffeeFSM:fsm1|           ; 16.4 (16.4)          ; 16.4 (16.4)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (26)             ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|CoffeeFSM:fsm1           ; CoffeeFSM        ; work         ;
-;    |Debounce:debounce_next|   ; 13.5 (13.5)          ; 14.8 (14.8)                      ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (26)             ; 21 (21)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|Debounce:debounce_next   ; Debounce         ; work         ;
-;    |Debounce:debounce_select| ; 12.8 (12.8)          ; 18.0 (18.0)                      ; 5.2 (5.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (26)             ; 21 (21)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|Debounce:debounce_select ; Debounce         ; work         ;
-;    |DisplayDecoder:dec_state| ; 2.5 (2.5)            ; 2.5 (2.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|DisplayDecoder:dec_state ; DisplayDecoder   ; work         ;
-;    |DisplayDecoder:dec_type|  ; 1.3 (1.3)            ; 1.3 (1.3)                        ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|DisplayDecoder:dec_type  ; DisplayDecoder   ; work         ;
-;    |LED_Animation:anim1|      ; 19.0 (19.0)          ; 20.2 (20.2)                      ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 35 (35)             ; 34 (34)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|LED_Animation:anim1      ; LED_Animation    ; work         ;
+; |CoffeeController             ; 157.5 (3.7)          ; 167.0 (4.0)                      ; 10.0 (0.3)                                        ; 0.5 (0.0)                        ; 0.0 (0.0)            ; 275 (7)             ; 208 (6)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 23   ; 0            ; |CoffeeController                          ; CoffeeController ; work         ;
+;    |ClockDivider:div1|        ; 22.8 (22.8)          ; 23.5 (23.5)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (40)             ; 48 (48)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|ClockDivider:div1        ; ClockDivider     ; work         ;
+;    |CoffeeFSM:fsm1|           ; 81.2 (81.2)          ; 87.2 (87.2)                      ; 6.2 (6.2)                                         ; 0.2 (0.2)                        ; 0.0 (0.0)            ; 131 (131)           ; 78 (78)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|CoffeeFSM:fsm1           ; CoffeeFSM        ; work         ;
+;    |Debounce:debounce_next|   ; 13.5 (13.5)          ; 13.5 (13.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (26)             ; 21 (21)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|Debounce:debounce_next   ; Debounce         ; work         ;
+;    |Debounce:debounce_select| ; 13.5 (13.5)          ; 13.8 (13.8)                      ; 0.5 (0.5)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 26 (26)             ; 21 (21)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|Debounce:debounce_select ; Debounce         ; work         ;
+;    |DisplayDecoder:dec_state| ; 3.0 (3.0)            ; 3.0 (3.0)                        ; 0.2 (0.2)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|DisplayDecoder:dec_state ; DisplayDecoder   ; work         ;
+;    |DisplayDecoder:dec_type|  ; 1.2 (1.2)            ; 1.5 (1.5)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|DisplayDecoder:dec_type  ; DisplayDecoder   ; work         ;
+;    |LED_Animation:anim1|      ; 18.7 (18.7)          ; 20.5 (20.5)                      ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 35 (35)             ; 34 (34)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CoffeeController|LED_Animation:anim1      ; LED_Animation    ; work         ;
 +-------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1466,8 +1477,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led[3]        ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; led[4]        ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; clk           ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; reset         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; next_button   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; reset         ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; next_button   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; select_button ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1478,180 +1489,51 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                            ; Pad To Core Index ; Setting ;
 +------------------------------------------------+-------------------+---------+
 ; clk                                            ;                   ;         ;
-;      - ClockDivider:div1|clk_out               ; 0                 ; 0       ;
 ;      - LED_Animation:anim1|div[23]             ; 0                 ; 0       ;
+;      - ClockDivider:div1|clk_out               ; 0                 ; 0       ;
 ; reset                                          ;                   ;         ;
-;      - coffee_sel[0]                           ; 0                 ; 0       ;
-;      - coffee_sel[1]                           ; 0                 ; 0       ;
-;      - CoffeeFSM:fsm1|current[0]               ; 0                 ; 0       ;
-;      - CoffeeFSM:fsm1|current[1]               ; 0                 ; 0       ;
-;      - CoffeeFSM:fsm1|current[2]               ; 0                 ; 0       ;
-;      - LED_Animation:anim1|led[0]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|led[1]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|led[2]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|led[3]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|led[4]              ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[6]            ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[7]            ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[8]            ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[9]            ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[10]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[2]            ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[1]            ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[11]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[12]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[13]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[14]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[27]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[15]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[16]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[17]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[18]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[19]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[0]            ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[20]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[21]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[28]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[29]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[25]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[30]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[31]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[22]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[23]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[24]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[26]           ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[5]            ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[4]            ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[3]            ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[14]      ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[13]      ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[12]      ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[11]      ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[10]      ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[9]       ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[8]       ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[6]       ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[5]       ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[4]       ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[7]       ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[19]      ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[18]      ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[17]      ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[16]      ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[15]      ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[3]       ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[2]       ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[1]       ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[0]       ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[16]    ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[10]    ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[17]    ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[18]    ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[19]    ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[12]    ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[11]    ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[5]     ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[6]     ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[7]     ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[8]     ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[9]     ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[13]    ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[14]    ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[15]    ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[4]     ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[3]     ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[2]     ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[1]     ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[0]     ; 0                 ; 0       ;
-;      - prev_next                               ; 0                 ; 0       ;
-;      - Debounce:debounce_next|stable_state     ; 0                 ; 0       ;
-;      - CoffeeFSM:fsm1|timer[2]                 ; 0                 ; 0       ;
-;      - CoffeeFSM:fsm1|timer[1]                 ; 0                 ; 0       ;
-;      - CoffeeFSM:fsm1|timer[0]                 ; 0                 ; 0       ;
-;      - ClockDivider:div1|clk_out               ; 0                 ; 0       ;
-;      - select_prev                             ; 0                 ; 0       ;
-;      - Debounce:debounce_select|stable_state   ; 0                 ; 0       ;
-;      - CoffeeFSM:fsm1|start_prev               ; 0                 ; 0       ;
-;      - LED_Animation:anim1|step[0]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|step[2]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[23]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|running             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|step[3]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|step[1]             ; 0                 ; 0       ;
-;      - CoffeeFSM:fsm1|done                     ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[22]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[21]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[20]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[19]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[18]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[17]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[16]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[15]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[14]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[13]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[12]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[11]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[10]             ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[9]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[8]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[7]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[6]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[5]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[4]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[3]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[2]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[0]              ; 0                 ; 0       ;
-;      - LED_Animation:anim1|div[1]              ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[15]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[1]~DUPLICATE  ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[4]~DUPLICATE  ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[6]~DUPLICATE  ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[8]~DUPLICATE  ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[12]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[13]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[14]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[19]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[20]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[24]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[31]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[26]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[27]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[29]~DUPLICATE ; 0                 ; 0       ;
-;      - ClockDivider:div1|counter[25]~DUPLICATE ; 0                 ; 0       ;
+;      - LED_Animation:anim1|div[23]             ; 1                 ; 0       ;
+;      - ClockDivider:div1|clk_out               ; 1                 ; 0       ;
+;      - reset~inputCLKENA0                      ; 0                 ; 0       ;
 ; next_button                                    ;                   ;         ;
-;      - Debounce:debounce_next|stable_state~0   ; 0                 ; 0       ;
-;      - Debounce:debounce_next|counter[14]~1    ; 0                 ; 0       ;
+;      - Debounce:debounce_next|stable_state~0   ; 1                 ; 0       ;
+;      - Debounce:debounce_next|counter[2]~1     ; 1                 ; 0       ;
 ; select_button                                  ;                   ;         ;
 ;      - Debounce:debounce_select|stable_state~0 ; 0                 ; 0       ;
-;      - Debounce:debounce_select|counter[16]~1  ; 0                 ; 0       ;
+;      - Debounce:debounce_select|counter[8]~1   ; 0                 ; 0       ;
 +------------------------------------------------+-------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Control Signals                                                                                                                                                      ;
-+----------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                   ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; ClockDivider:div1|LessThan0~8          ; LABCELL_X23_Y6_N36  ; 48      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; ClockDivider:div1|clk_out              ; FF_X25_Y4_N50       ; 10      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; Debounce:debounce_next|counter[14]~1   ; LABCELL_X24_Y3_N57  ; 20      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; Debounce:debounce_select|counter[16]~1 ; LABCELL_X31_Y5_N30  ; 20      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; LED_Animation:anim1|div[23]            ; FF_X28_Y5_N38       ; 11      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; LED_Animation:anim1|led[0]~0           ; LABCELL_X27_Y3_N15  ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; always0~0                              ; MLABCELL_X28_Y3_N30 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk                                    ; PIN_K14             ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk                                    ; PIN_K14             ; 116     ; Clock        ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; reset                                  ; PIN_AB12            ; 137     ; Async. clear ; no     ; --                   ; --               ; --                        ;
-+----------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                  ; Location             ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; ClockDivider:div1|Equal0~6            ; LABCELL_X51_Y12_N54  ; 48      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; ClockDivider:div1|clk_out             ; FF_X56_Y18_N59       ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; CoffeeFSM:fsm1|Equal0~2               ; LABCELL_X81_Y18_N18  ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; CoffeeFSM:fsm1|timer[6]~1             ; LABCELL_X81_Y18_N48  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Debounce:debounce_next|counter[2]~1   ; LABCELL_X48_Y13_N57  ; 20      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; Debounce:debounce_select|counter[8]~1 ; LABCELL_X79_Y17_N45  ; 20      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; DisplayDecoder:dec_state|WideOr0~1    ; MLABCELL_X78_Y18_N15 ; 43      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; LED_Animation:anim1|div[23]           ; FF_X60_Y19_N38       ; 11      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; LED_Animation:anim1|led[0]~0          ; LABCELL_X77_Y18_N57  ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; always0~0                             ; LABCELL_X48_Y13_N48  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                                   ; PIN_K14              ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk                                   ; PIN_K14              ; 195     ; Clock        ; yes    ; Global Clock         ; GCLK12           ; --                        ;
+; reset                                 ; PIN_AB12             ; 3       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; reset                                 ; PIN_AB12             ; 206     ; Async. clear ; yes    ; Global Clock         ; GCLK7            ; --                        ;
++---------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                     ;
-+------+----------+---------+----------------------+------------------+---------------------------+
-; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------+----------+---------+----------------------+------------------+---------------------------+
-; clk  ; PIN_K14  ; 116     ; Global Clock         ; GCLK12           ; --                        ;
-+------+----------+---------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                      ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+; clk   ; PIN_K14  ; 195     ; Global Clock         ; GCLK12           ; --                        ;
+; reset ; PIN_AB12 ; 206     ; Global Clock         ; GCLK7            ; --                        ;
++-------+----------+---------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -1659,15 +1541,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 265 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 24 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 93 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 75 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 427 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 33 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 106 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 98 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 69 / 289,320 ( < 1 % )  ;
-; Global clocks                               ; 1 / 16 ( 6 % )          ;
+; Direct links                                ; 111 / 289,320 ( < 1 % ) ;
+; Global clocks                               ; 2 / 16 ( 13 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
 ; HPS_INTERFACE_BOOT_FROM_FPGA_INPUTs         ; 0 / 9 ( 0 % )           ;
@@ -1722,13 +1604,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 80 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 122 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 93 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 114 / 20,720 ( < 1 % )  ;
-; R3 interconnects                            ; 144 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 181 / 266,960 ( < 1 % ) ;
-; Spine clocks                                ; 2 / 360 ( < 1 % )       ;
+; R14 interconnects                           ; 84 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 113 / 20,720 ( < 1 % )  ;
+; R3 interconnects                            ; 195 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 223 / 266,960 ( < 1 % ) ;
+; Spine clocks                                ; 8 / 360 ( 2 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
 
@@ -1866,121 +1748,121 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+-----------------------------+-------------------+
 ; Source Clock(s)               ; Destination Clock(s)        ; Delay Added in ns ;
 +-------------------------------+-----------------------------+-------------------+
-; clk                           ; clk                         ; 79.1              ;
-; LED_Animation:anim1|div[23]   ; LED_Animation:anim1|div[23] ; 17.4              ;
-; ClockDivider:div1|clk_out     ; ClockDivider:div1|clk_out   ; 12.5              ;
-; clk,ClockDivider:div1|clk_out ; ClockDivider:div1|clk_out   ; 3.6               ;
+; clk                           ; clk                         ; 89.5              ;
+; LED_Animation:anim1|div[23]   ; LED_Animation:anim1|div[23] ; 20.5              ;
+; clk,ClockDivider:div1|clk_out ; clk                         ; 13.8              ;
+; ClockDivider:div1|clk_out     ; clk                         ; 5.7               ;
 +-------------------------------+-----------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+--------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                    ;
-+--------------------------------------+---------------------------------------+-------------------+
-; Source Register                      ; Destination Register                  ; Delay Added in ns ;
-+--------------------------------------+---------------------------------------+-------------------+
-; LED_Animation:anim1|div[23]          ; LED_Animation:anim1|div[23]           ; 8.043             ;
-; ClockDivider:div1|clk_out            ; ClockDivider:div1|clk_out             ; 7.536             ;
-; ClockDivider:div1|counter[22]        ; ClockDivider:div1|clk_out             ; 3.642             ;
-; ClockDivider:div1|counter[19]        ; ClockDivider:div1|clk_out             ; 3.570             ;
-; ClockDivider:div1|counter[30]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[31]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[28]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[27]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[26]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[29]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[24]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[21]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[20]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[18]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[17]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[16]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[15]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[14]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[13]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[12]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[11]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[10]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[9]         ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[8]         ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[7]         ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[6]         ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[5]         ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[4]         ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[3]         ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[2]         ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[1]         ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[0]         ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[25]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; ClockDivider:div1|counter[23]        ; ClockDivider:div1|clk_out             ; 3.536             ;
-; LED_Animation:anim1|div[20]          ; LED_Animation:anim1|div[23]           ; 2.857             ;
-; LED_Animation:anim1|div[19]          ; LED_Animation:anim1|div[23]           ; 2.786             ;
-; LED_Animation:anim1|div[21]          ; LED_Animation:anim1|div[23]           ; 2.780             ;
-; LED_Animation:anim1|div[22]          ; LED_Animation:anim1|div[23]           ; 2.777             ;
-; LED_Animation:anim1|div[18]          ; LED_Animation:anim1|div[23]           ; 2.735             ;
-; LED_Animation:anim1|div[17]          ; LED_Animation:anim1|div[23]           ; 2.652             ;
-; LED_Animation:anim1|div[16]          ; LED_Animation:anim1|div[23]           ; 2.594             ;
-; LED_Animation:anim1|div[14]          ; LED_Animation:anim1|div[23]           ; 2.465             ;
-; LED_Animation:anim1|div[12]          ; LED_Animation:anim1|div[23]           ; 2.351             ;
-; LED_Animation:anim1|div[15]          ; LED_Animation:anim1|div[23]           ; 2.341             ;
-; LED_Animation:anim1|div[13]          ; LED_Animation:anim1|div[23]           ; 2.307             ;
-; LED_Animation:anim1|div[11]          ; LED_Animation:anim1|div[23]           ; 2.287             ;
-; LED_Animation:anim1|div[10]          ; LED_Animation:anim1|div[23]           ; 2.134             ;
-; LED_Animation:anim1|div[9]           ; LED_Animation:anim1|div[23]           ; 2.066             ;
-; LED_Animation:anim1|div[8]           ; LED_Animation:anim1|div[23]           ; 2.011             ;
-; LED_Animation:anim1|div[7]           ; LED_Animation:anim1|div[23]           ; 1.930             ;
-; LED_Animation:anim1|div[1]           ; LED_Animation:anim1|div[23]           ; 1.913             ;
-; LED_Animation:anim1|div[6]           ; LED_Animation:anim1|div[23]           ; 1.872             ;
-; LED_Animation:anim1|div[4]           ; LED_Animation:anim1|div[23]           ; 1.742             ;
-; LED_Animation:anim1|div[2]           ; LED_Animation:anim1|div[23]           ; 1.630             ;
-; LED_Animation:anim1|div[5]           ; LED_Animation:anim1|div[23]           ; 1.619             ;
-; LED_Animation:anim1|div[3]           ; LED_Animation:anim1|div[23]           ; 1.587             ;
-; LED_Animation:anim1|div[0]           ; LED_Animation:anim1|div[23]           ; 1.569             ;
-; LED_Animation:anim1|step[0]          ; LED_Animation:anim1|led[2]            ; 1.009             ;
-; LED_Animation:anim1|step[2]          ; LED_Animation:anim1|led[2]            ; 0.982             ;
-; LED_Animation:anim1|step[1]          ; LED_Animation:anim1|led[2]            ; 0.967             ;
-; select_prev                          ; CoffeeFSM:fsm1|start_prev             ; 0.931             ;
-; CoffeeFSM:fsm1|current[0]            ; CoffeeFSM:fsm1|timer[2]               ; 0.720             ;
-; CoffeeFSM:fsm1|current[2]            ; CoffeeFSM:fsm1|timer[2]               ; 0.720             ;
-; CoffeeFSM:fsm1|done                  ; LED_Animation:anim1|step[2]           ; 0.688             ;
-; CoffeeFSM:fsm1|current[1]            ; CoffeeFSM:fsm1|done                   ; 0.643             ;
-; LED_Animation:anim1|running          ; LED_Animation:anim1|step[2]           ; 0.614             ;
-; CoffeeFSM:fsm1|timer[2]              ; CoffeeFSM:fsm1|current[1]             ; 0.570             ;
-; CoffeeFSM:fsm1|start_prev            ; CoffeeFSM:fsm1|done                   ; 0.539             ;
-; Debounce:debounce_select|counter[13] ; Debounce:debounce_select|stable_state ; 0.536             ;
-; CoffeeFSM:fsm1|timer[1]              ; CoffeeFSM:fsm1|timer[1]               ; 0.531             ;
-; LED_Animation:anim1|step[3]          ; LED_Animation:anim1|running           ; 0.529             ;
-; Debounce:debounce_select|counter[7]  ; Debounce:debounce_select|stable_state ; 0.507             ;
-; Debounce:debounce_select|counter[6]  ; Debounce:debounce_select|stable_state ; 0.505             ;
-; Debounce:debounce_select|counter[5]  ; Debounce:debounce_select|stable_state ; 0.448             ;
-; Debounce:debounce_next|stable_state  ; prev_next                             ; 0.444             ;
-; CoffeeFSM:fsm1|timer[0]              ; CoffeeFSM:fsm1|current[1]             ; 0.426             ;
-; coffee_sel[0]                        ; CoffeeFSM:fsm1|current[1]             ; 0.426             ;
-; coffee_sel[1]                        ; CoffeeFSM:fsm1|current[1]             ; 0.426             ;
-; Debounce:debounce_select|counter[10] ; Debounce:debounce_select|stable_state ; 0.423             ;
-; Debounce:debounce_select|counter[9]  ; Debounce:debounce_select|stable_state ; 0.418             ;
-; Debounce:debounce_select|counter[11] ; Debounce:debounce_select|stable_state ; 0.416             ;
-; Debounce:debounce_select|counter[12] ; Debounce:debounce_select|stable_state ; 0.398             ;
-; Debounce:debounce_next|counter[7]    ; Debounce:debounce_next|stable_state   ; 0.358             ;
-; Debounce:debounce_select|counter[8]  ; Debounce:debounce_select|stable_state ; 0.338             ;
-; Debounce:debounce_next|counter[12]   ; Debounce:debounce_next|stable_state   ; 0.313             ;
-; Debounce:debounce_next|counter[10]   ; Debounce:debounce_next|stable_state   ; 0.296             ;
-; Debounce:debounce_next|counter[18]   ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[17]   ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[16]   ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[14]   ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[13]   ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[11]   ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[9]    ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[8]    ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[6]    ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[5]    ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[15]   ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_next|counter[19]   ; Debounce:debounce_next|stable_state   ; 0.285             ;
-; Debounce:debounce_select|counter[17] ; Debounce:debounce_select|stable_state ; 0.273             ;
-; Debounce:debounce_select|counter[16] ; Debounce:debounce_select|stable_state ; 0.273             ;
-+--------------------------------------+---------------------------------------+-------------------+
++-----------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                           ;
++---------------------------------------+-----------------------------+-------------------+
+; Source Register                       ; Destination Register        ; Delay Added in ns ;
++---------------------------------------+-----------------------------+-------------------+
+; LED_Animation:anim1|div[23]           ; LED_Animation:anim1|div[23] ; 7.876             ;
+; ClockDivider:div1|clk_out             ; ClockDivider:div1|clk_out   ; 7.817             ;
+; ClockDivider:div1|counter[23]         ; ClockDivider:div1|clk_out   ; 3.445             ;
+; ClockDivider:div1|counter[31]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[29]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[28]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[27]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[26]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[25]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[24]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[22]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[21]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[20]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[19]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[18]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[17]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[16]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[15]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[14]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[30]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[12]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[11]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[10]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[9]          ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[8]          ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[7]          ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[6]          ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[5]          ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[4]          ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[3]          ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[2]          ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[1]          ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[0]          ; ClockDivider:div1|clk_out   ; 3.394             ;
+; ClockDivider:div1|counter[13]         ; ClockDivider:div1|clk_out   ; 3.394             ;
+; select_prev                           ; CoffeeFSM:fsm1|start_prev   ; 3.287             ;
+; LED_Animation:anim1|div[20]           ; LED_Animation:anim1|div[23] ; 2.687             ;
+; LED_Animation:anim1|div[22]           ; LED_Animation:anim1|div[23] ; 2.641             ;
+; LED_Animation:anim1|div[19]           ; LED_Animation:anim1|div[23] ; 2.620             ;
+; LED_Animation:anim1|div[21]           ; LED_Animation:anim1|div[23] ; 2.612             ;
+; LED_Animation:anim1|div[18]           ; LED_Animation:anim1|div[23] ; 2.570             ;
+; LED_Animation:anim1|div[17]           ; LED_Animation:anim1|div[23] ; 2.488             ;
+; LED_Animation:anim1|div[16]           ; LED_Animation:anim1|div[23] ; 2.431             ;
+; LED_Animation:anim1|div[14]           ; LED_Animation:anim1|div[23] ; 2.301             ;
+; LED_Animation:anim1|div[12]           ; LED_Animation:anim1|div[23] ; 2.183             ;
+; LED_Animation:anim1|div[15]           ; LED_Animation:anim1|div[23] ; 2.175             ;
+; LED_Animation:anim1|div[11]           ; LED_Animation:anim1|div[23] ; 2.117             ;
+; LED_Animation:anim1|div[13]           ; LED_Animation:anim1|div[23] ; 2.108             ;
+; CoffeeFSM:fsm1|timer[31]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[29]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[28]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[27]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; Debounce:debounce_select|stable_state ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|start_prev             ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[26]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[24]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[23]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[22]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[21]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[20]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[19]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[17]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[16]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[15]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[14]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[13]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[12]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[11]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[10]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[9]               ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[8]               ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[7]               ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[25]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; coffee_sel[1]                         ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; coffee_sel[0]                         ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|current[0]             ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|current[1]             ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|current[2]             ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[30]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; CoffeeFSM:fsm1|timer[18]              ; CoffeeFSM:fsm1|timer[0]     ; 2.037             ;
+; LED_Animation:anim1|div[10]           ; LED_Animation:anim1|div[23] ; 1.976             ;
+; LED_Animation:anim1|div[9]            ; LED_Animation:anim1|div[23] ; 1.907             ;
+; LED_Animation:anim1|div[7]            ; LED_Animation:anim1|div[23] ; 1.765             ;
+; LED_Animation:anim1|div[1]            ; LED_Animation:anim1|div[23] ; 1.747             ;
+; LED_Animation:anim1|div[6]            ; LED_Animation:anim1|div[23] ; 1.714             ;
+; LED_Animation:anim1|div[8]            ; LED_Animation:anim1|div[23] ; 1.704             ;
+; LED_Animation:anim1|div[4]            ; LED_Animation:anim1|div[23] ; 1.581             ;
+; LED_Animation:anim1|div[3]            ; LED_Animation:anim1|div[23] ; 1.522             ;
+; LED_Animation:anim1|div[5]            ; LED_Animation:anim1|div[23] ; 1.498             ;
+; LED_Animation:anim1|div[2]            ; LED_Animation:anim1|div[23] ; 1.277             ;
+; LED_Animation:anim1|div[0]            ; LED_Animation:anim1|div[23] ; 1.201             ;
+; CoffeeFSM:fsm1|end_timer[31]          ; CoffeeFSM:fsm1|timer[0]     ; 1.148             ;
+; CoffeeFSM:fsm1|end_timer[30]          ; CoffeeFSM:fsm1|timer[0]     ; 1.148             ;
+; CoffeeFSM:fsm1|end_timer[29]          ; CoffeeFSM:fsm1|timer[0]     ; 1.148             ;
+; CoffeeFSM:fsm1|end_timer[28]          ; CoffeeFSM:fsm1|timer[0]     ; 1.148             ;
+; CoffeeFSM:fsm1|end_timer[26]          ; CoffeeFSM:fsm1|timer[0]     ; 1.148             ;
+; CoffeeFSM:fsm1|end_timer[25]          ; CoffeeFSM:fsm1|timer[0]     ; 1.148             ;
+; CoffeeFSM:fsm1|end_timer[24]          ; CoffeeFSM:fsm1|timer[0]     ; 1.148             ;
+; CoffeeFSM:fsm1|end_timer[23]          ; CoffeeFSM:fsm1|timer[0]     ; 1.148             ;
+; CoffeeFSM:fsm1|end_timer[22]          ; CoffeeFSM:fsm1|timer[0]     ; 1.148             ;
+; CoffeeFSM:fsm1|end_timer[21]          ; CoffeeFSM:fsm1|timer[0]     ; 1.148             ;
++---------------------------------------+-----------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
 
@@ -1996,8 +1878,13 @@ Info (171003): Fitter is performing an Auto Fit compilation, which may decrease 
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (184020): Starting Fitter periphery placement operations
-Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): clk~inputCLKENA0 with 100 fanout uses global clock CLKCTRL_G12
+Info (11191): Automatically promoted 2 clocks (2 global)
+    Info (11162): clk~inputCLKENA0 with 169 fanout uses global clock CLKCTRL_G12
+    Info (11162): reset~inputCLKENA0 with 180 fanout uses global clock CLKCTRL_G6
+        Info (12525): This signal is driven by core routing -- it may be moved during placement to reduce routing delays
+Warning (16406): 1 global input pin(s) will use non-dedicated clock routing
+    Warning (16407): Source REFCLK I/O is not placed onto a dedicated REFCLK input pin for global clock driver reset~inputCLKENA0, placed at CLKCTRL_G6
+        Info (179012): Refclk input I/O pad reset is placed onto PIN_AB12
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'CoffeeMaker.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -2007,31 +1894,31 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:09
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:10
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:03
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X22_Y0 to location X32_Y10
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X78_Y11 to location X89_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.47 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+Info (11888): Total time spent on timing analysis during the Fitter is 0.68 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info (144001): Generated suppressed messages file C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/output_files/CoffeeMaker.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7330 megabytes
-    Info: Processing ended: Thu Nov 20 21:35:48 2025
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:01:54
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 7374 megabytes
+    Info: Processing ended: Fri Nov 21 19:49:52 2025
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:02:12
 
 
 +----------------------------+

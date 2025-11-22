@@ -10,80 +10,85 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/LED_Animation.sv}
+# vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:26:12 on Nov 20,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/LED_Animation.sv 
+# Start time: 19:57:22 on Nov 21,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv 
 # -- Compiling module LED_Animation
 # 
 # Top level modules:
 # 	LED_Animation
-# End time: 19:26:12 on Nov 20,2025, Elapsed time: 0:00:00
+# End time: 19:57:22 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/CoffeeFSM.sv}
+# vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:26:12 on Nov 20,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/CoffeeFSM.sv 
+# Start time: 19:57:22 on Nov 21,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM.sv 
 # -- Compiling module CoffeeFSM
 # 
 # Top level modules:
 # 	CoffeeFSM
-# End time: 19:26:12 on Nov 20,2025, Elapsed time: 0:00:00
+# End time: 19:57:22 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/ClockDivider.sv}
+# vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/ClockDivider.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:26:12 on Nov 20,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/ClockDivider.sv 
+# Start time: 19:57:22 on Nov 21,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/ClockDivider.sv 
 # -- Compiling module ClockDivider
 # 
 # Top level modules:
 # 	ClockDivider
-# End time: 19:26:13 on Nov 20,2025, Elapsed time: 0:00:01
+# End time: 19:57:23 on Nov 21,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/DisplayDecoder.sv}
+# vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/DisplayDecoder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:26:13 on Nov 20,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/DisplayDecoder.sv 
+# Start time: 19:57:23 on Nov 21,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/DisplayDecoder.sv 
 # -- Compiling module DisplayDecoder
 # 
 # Top level modules:
 # 	DisplayDecoder
-# End time: 19:26:13 on Nov 20,2025, Elapsed time: 0:00:00
+# End time: 19:57:23 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/CoffeeController.sv}
+# vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:26:13 on Nov 20,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/CoffeeController.sv 
+# Start time: 19:57:23 on Nov 21,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv 
 # -- Compiling module CoffeeController
 # 
 # Top level modules:
 # 	CoffeeController
-# End time: 19:26:13 on Nov 20,2025, Elapsed time: 0:00:00
+# End time: 19:57:23 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/CoffeeMaker {C:/CoffeeMaker/TestCoffeeController.sv}
+# vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/Debounce.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:26:13 on Nov 20,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/CoffeeMaker" C:/CoffeeMaker/TestCoffeeController.sv 
-# -- Compiling module TestCoffeeController
+# Start time: 19:57:23 on Nov 21,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/Debounce.sv 
+# -- Compiling module Debounce
 # 
 # Top level modules:
-# 	TestCoffeeController
-# End time: 19:26:13 on Nov 20,2025, Elapsed time: 0:00:00
+# 	Debounce
+# End time: 19:57:23 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  TestCoffeeController
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" TestCoffeeController 
-# Start time: 19:26:13 on Nov 20,2025
+# vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:23 on Nov 21,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb.sv 
+# -- Compiling module CoffeeFSM_tb
+# 
+# Top level modules:
+# 	CoffeeFSM_tb
+# End time: 19:57:23 on Nov 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  CoffeeFSM_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" CoffeeFSM_tb 
+# Start time: 19:57:23 on Nov 21,2025
 # Loading sv_std.std
-# Loading work.TestCoffeeController
-# Loading work.CoffeeController
+# Loading work.CoffeeFSM_tb
 # Loading work.ClockDivider
 # Loading work.CoffeeFSM
-# Loading work.DisplayDecoder
-# Loading work.LED_Animation
-# ** Warning: (vsim-3015) C:/CoffeeMaker/CoffeeController.sv(83): [PCDPC] - Port size (4) does not match connection size (2) for port 'char_sel'. The port definition is at: C:/CoffeeMaker/DisplayDecoder.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /TestCoffeeController/uut/dec_type File: C:/CoffeeMaker/DisplayDecoder.sv
 # 
 # add wave *
 # view structure
@@ -91,13 +96,15 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# Iniciando simulación del CoffeeFSM...
+# [0] Aplicando reset...
 # 
-# === INICIO SIMULACIÓN ===
+# === PRUEBA ESPRESSO (sel=00) ===
+# [1595000] state=AGUA (1) done=0 sel=00 timer=0
 # 
-# === SIMULACIÓN 1: Expreso ===
-# Can't move the Now cursor.
-# t=250000096000 | TYPE=1111111 | STATE=1111111 (0) | LED=00000
+# --- Iniciando preparación sel=00 ---
+# [2095000] state=AGUA (1) done=0 sel=00 timer=0
 # Break key hit
 # Simulation stop requested.
-# End time: 19:27:19 on Nov 20,2025, Elapsed time: 0:01:06
-# Errors: 1, Warnings: 1
+# End time: 19:57:39 on Nov 21,2025, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 0

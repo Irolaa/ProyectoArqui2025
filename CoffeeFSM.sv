@@ -1,5 +1,5 @@
 module CoffeeFSM(
-    input  logic clk,            
+    input  logic clk,           
     input  logic reset,
     input  logic start,
     input  logic [1:0] coffee_sel, // 00=E, 01=L, 10=C
@@ -19,37 +19,38 @@ module CoffeeFSM(
 
     state_t current, next;
 
-    logic [2:0] timer;
+    logic [31:0] timer;
     logic timer_done;
     logic start_prev;  
+    logic [31:0] end_timer;  
 
-    // Duraciones por estado
-    function automatic [2:0] get_duration(state_t st, logic [1:0] sel);
+    // Duraciones en ciclos de reloj (50MHz = 50,000,000 ciclos/segundo)
+    function automatic [31:0] get_duration(state_t st, logic [1:0] sel);
         case (st)
             AGUA: begin
-                if (sel == 2'b00) get_duration = 3'd2; // Expreso: 2s
-                else if (sel == 2'b01) get_duration = 3'd1; // Latte: 1s
-                else get_duration = 3'd2; // Capuchino: 2s
+                if (sel == 2'b00) get_duration = 32'd100_000_000; // Expreso: 2s
+                else if (sel == 2'b01) get_duration = 32'd50_000_000; // Latte: 1s
+                else get_duration = 32'd100_000_000; // Capuchino: 2s
             end
             CAFE: begin
-                if (sel == 2'b00) get_duration = 3'd1; // Expreso: 1s
-                else if (sel == 2'b01) get_duration = 3'd1; // Latte: 1s
-                else get_duration = 3'd0; // Capuchino NO lleva café
+                if (sel == 2'b00) get_duration = 32'd50_000_000; // Expreso: 1s
+                else if (sel == 2'b01) get_duration = 32'd50_000_000; // Latte: 1s
+                else get_duration = 32'd0; // Capuchino NO lleva café
             end
             LECHE: begin
-                if (sel == 2'b00) get_duration = 3'd0; // Expreso no usa
-                else if (sel == 2'b01) get_duration = 3'd1; // Latte: 1s
-                else get_duration = 3'd1; // Capuchino: 1s
+                if (sel == 2'b00) get_duration = 32'd0; // Expreso no usa
+                else if (sel == 2'b01) get_duration = 32'd50_000_000; // Latte: 1s
+                else get_duration = 32'd50_000_000; // Capuchino: 1s
             end
             AZUCAR: begin
-                if (sel == 2'b00) get_duration = 3'd0; // Expreso no usa
-                else get_duration = 3'd1; // Latte y Capi: 1s
+                if (sel == 2'b00) get_duration = 32'd0; // Expreso no usa
+                else get_duration = 32'd50_000_000; // Latte y Capi: 1s
             end
             CREMA: begin
-                if (sel == 2'b10) get_duration = 3'd1; // Solo Capuchino
-                else get_duration = 3'd0;
+                if (sel == 2'b10) get_duration = 32'd50_000_000; // Solo Capuchino: 1s
+                else get_duration = 32'd0;
             end
-            default: get_duration = 3'd0;
+            default: get_duration = 32'd0;
         endcase
     endfunction
 
@@ -58,23 +59,32 @@ module CoffeeFSM(
         if (reset) begin
             current <= IDLE;
             timer <= 0;
+            end_timer <= 0;
             done <= 0;
             start_prev <= 0;
         end else begin
             current <= next;
             start_prev <= start;
 
+            // Timer principal para estados de proceso
             if (current != next)
                 timer <= 0;
-            else
+            else if (!timer_done && (current != END)) 
                 timer <= timer + 1;
 
-            done <= (next == END);
+            // Timer para END
+            if (current == END)
+                end_timer <= end_timer + 1;
+            else
+                end_timer <= 0;
+
+            done <= (current == END); 
         end
     end
 
     assign timer_done = (timer >= get_duration(current, coffee_sel));
 
+    // Lógica de transición de estados
     always_comb begin
         next = current;
 
@@ -94,7 +104,7 @@ module CoffeeFSM(
                 if (timer_done) begin
                     if (coffee_sel == 2'b00) next = END;  // E termina aquí
                     else if (coffee_sel == 2'b01) next = LECHE; // L sigue
-                    else next = END; // Por si acaso
+                    else next = END; // C no tiene café
                 end
 
             LECHE:
@@ -114,7 +124,8 @@ module CoffeeFSM(
                     next = END;
 
             END:
-                next = IDLE;
+                if (end_timer >= 32'd100_000_000) // 2 segundos en END
+                    next = IDLE;
 
             default: next = IDLE;
         endcase

@@ -2,148 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'ClockDivider:div1|clk_out'
-Slack : -5.820
-TNS   : -45.893
-
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -5.135
-TNS   : -363.671
+Slack : -6.384
+TNS   : -622.067
 
 Type  : Slow 1100mV 85C Model Setup 'LED_Animation:anim1|div[23]'
-Slack : -1.906
-TNS   : -13.967
+Slack : -3.042
+TNS   : -21.643
+
+Type  : Slow 1100mV 85C Model Setup 'ClockDivider:div1|clk_out'
+Slack : -2.247
+TNS   : -2.247
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.217
+Slack : 0.223
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'LED_Animation:anim1|div[23]'
-Slack : 0.430
+Slack : 0.873
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'ClockDivider:div1|clk_out'
-Slack : 0.627
+Slack : 1.491
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.811
-TNS   : -62.562
+Slack : -0.649
+TNS   : -103.135
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'LED_Animation:anim1|div[23]'
 Slack : -0.394
-TNS   : -5.583
+TNS   : -6.769
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ClockDivider:div1|clk_out'
 Slack : -0.394
-TNS   : -4.920
-
-Type  : Slow 1100mV 0C Model Setup 'ClockDivider:div1|clk_out'
-Slack : -5.907
-TNS   : -46.940
+TNS   : -0.571
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -5.387
-TNS   : -356.155
+Slack : -6.434
+TNS   : -614.141
 
 Type  : Slow 1100mV 0C Model Setup 'LED_Animation:anim1|div[23]'
-Slack : -1.902
-TNS   : -13.766
+Slack : -3.198
+TNS   : -22.182
+
+Type  : Slow 1100mV 0C Model Setup 'ClockDivider:div1|clk_out'
+Slack : -2.445
+TNS   : -2.445
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.218
+Slack : 0.327
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'LED_Animation:anim1|div[23]'
-Slack : 0.388
+Slack : 0.855
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'ClockDivider:div1|clk_out'
-Slack : 0.623
+Slack : 1.675
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.819
-TNS   : -67.237
+Slack : -0.660
+TNS   : -111.764
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'LED_Animation:anim1|div[23]'
 Slack : -0.394
-TNS   : -5.460
+TNS   : -6.618
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ClockDivider:div1|clk_out'
 Slack : -0.394
-TNS   : -4.882
+TNS   : -0.562
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -4.081
-TNS   : -178.542
-
-Type  : Fast 1100mV 85C Model Setup 'ClockDivider:div1|clk_out'
-Slack : -2.938
-TNS   : -23.291
+Slack : -4.396
+TNS   : -292.009
 
 Type  : Fast 1100mV 85C Model Setup 'LED_Animation:anim1|div[23]'
-Slack : -0.891
-TNS   : -6.033
+Slack : -1.365
+TNS   : -9.186
 
-Type  : Fast 1100mV 85C Model Hold 'LED_Animation:anim1|div[23]'
-Slack : 0.018
-TNS   : 0.000
+Type  : Fast 1100mV 85C Model Setup 'ClockDivider:div1|clk_out'
+Slack : -0.992
+TNS   : -0.992
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.181
+Slack : 0.103
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'LED_Animation:anim1|div[23]'
+Slack : 0.408
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'ClockDivider:div1|clk_out'
-Slack : 0.297
+Slack : 0.656
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.740
-TNS   : -12.514
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ClockDivider:div1|clk_out'
-Slack : 0.042
-TNS   : 0.000
+Slack : -0.666
+TNS   : -18.383
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'LED_Animation:anim1|div[23]'
-Slack : 0.058
+Slack : -0.067
+TNS   : -0.657
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ClockDivider:div1|clk_out'
+Slack : 0.027
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -3.494
-TNS   : -153.556
-
-Type  : Fast 1100mV 0C Model Setup 'ClockDivider:div1|clk_out'
-Slack : -2.796
-TNS   : -22.291
+Slack : -3.748
+TNS   : -255.878
 
 Type  : Fast 1100mV 0C Model Setup 'LED_Animation:anim1|div[23]'
-Slack : -0.772
-TNS   : -5.019
+Slack : -1.376
+TNS   : -8.757
 
-Type  : Fast 1100mV 0C Model Hold 'LED_Animation:anim1|div[23]'
-Slack : 0.000
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Setup 'ClockDivider:div1|clk_out'
+Slack : -1.044
+TNS   : -1.044
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.172
+Slack : -0.126
+TNS   : -2.934
+
+Type  : Fast 1100mV 0C Model Hold 'LED_Animation:anim1|div[23]'
+Slack : 0.381
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'ClockDivider:div1|clk_out'
-Slack : 0.268
+Slack : 0.734
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.706
-TNS   : -12.365
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ClockDivider:div1|clk_out'
-Slack : 0.064
-TNS   : 0.000
+Slack : -0.640
+TNS   : -18.420
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'LED_Animation:anim1|div[23]'
-Slack : 0.084
+Slack : -0.024
+TNS   : -0.229
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ClockDivider:div1|clk_out'
+Slack : 0.035
 TNS   : 0.000
 
 ------------------------------------------------------------
