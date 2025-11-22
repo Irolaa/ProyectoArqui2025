@@ -1,0 +1,32 @@
+`timescale 1ns/1ps
+
+module TestDisplayDecoder;
+
+    logic [3:0] char_sel;
+    logic [6:0] segments;
+
+    // Instancia del DUT
+    DisplayDecoder dut (
+        .char_sel(char_sel),
+        .segments(segments)
+    );
+
+    initial begin
+        $display("=== Simulación 1: Recorrido completo del decoder ===");
+
+        // Recorre todos los valores de 0 a 8
+        for (int i = 0; i <= 8; i++) begin
+            char_sel = i;
+            #10;
+            $display("[%0t] char_sel=%0d -> segments=%b", $time, char_sel, segments);
+        end
+
+        // Caso default
+        char_sel = 4'd15;
+        #10;
+        $display("[%0t] char_sel=15 -> segments=%b (default)", $time, segments);
+
+        $finish;
+    end
+
+endmodule

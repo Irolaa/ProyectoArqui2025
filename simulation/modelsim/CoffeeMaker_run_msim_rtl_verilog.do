@@ -12,9 +12,9 @@ vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025
 vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv}
 vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/Debounce.sv}
 
-vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb.sv}
+vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestClockDivider2.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  CoffeeFSM_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  TestClockDivider2
 
 add wave *
 view structure
