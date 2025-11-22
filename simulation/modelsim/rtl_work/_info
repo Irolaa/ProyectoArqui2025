@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/simulation/modelsim
 vClockDivider
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1763780181
+Z2 !s110 1763787280
 !i10b 1
 !s100 >5[cOWCaD19;RVdJYR=ZJ0
 IXmQ9Ah;7V`ZmZN?0okBBa2
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1763780181.000000
+Z5 !s108 1763787280.000000
 !s107 C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/ClockDivider.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025|C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/ClockDivider.sv|
 !i113 1
@@ -36,7 +36,7 @@ Z8 tCvgOpt 0
 n@clock@divider
 vCoffeeController
 R1
-Z9 !s110 1763780182
+R2
 !i10b 1
 !s100 L2lQznAlN3>Ei[c;mR<Ei0
 IMKKJaJbd_N4lje7>e]7eo0
@@ -52,7 +52,7 @@ R4
 r1
 !s85 0
 31
-Z10 !s108 1763780182.000000
+R5
 !s107 C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025|C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv|
 !i113 1
@@ -64,13 +64,13 @@ vCoffeeFSM
 R1
 R2
 !i10b 1
-!s100 _Y[VNTc@25ZfLU@a5j@Lh2
-I2<7@TgkTSY]3GS]i_oV[R1
+!s100 j<RFcz904egcOCGAB8M343
+I1hHd9WR<K[3iEY>lf3HbD2
 R3
 !s105 CoffeeFSM_sv_unit
 S1
 R0
-w1763778658
+w1763787107
 8C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM.sv
 FC:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM.sv
 L0 1
@@ -86,6 +86,32 @@ R6
 R7
 R8
 n@coffee@f@s@m
+vCoffeeFSM_tb2
+R1
+Z9 !s110 1763787281
+!i10b 1
+!s100 JBjC_>RzjUnfQSOmI;hi=0
+IoD_SU?l9dY;n=3G<OM;aY0
+R3
+!s105 CoffeeFSM_tb2_sv_unit
+S1
+R0
+w1763787273
+8C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb2.sv
+FC:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb2.sv
+L0 3
+R4
+r1
+!s85 0
+31
+Z10 !s108 1763787281.000000
+!s107 C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025|C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb2.sv|
+!i113 1
+R6
+R7
+R8
+n@coffee@f@s@m_tb2
 vDebounce
 R1
 R9
@@ -114,7 +140,7 @@ R8
 n@debounce
 vDisplayDecoder
 R1
-R9
+R2
 !i10b 1
 !s100 HA9@hj2FQBBcbCEzo>3gZ0
 I9z??R@Xjei0^HzB40RzgO1
@@ -122,7 +148,7 @@ R3
 !s105 DisplayDecoder_sv_unit
 S1
 R0
-w1763696106
+w1763785766
 8C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/DisplayDecoder.sv
 FC:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/DisplayDecoder.sv
 L0 1
@@ -130,7 +156,7 @@ R4
 r1
 !s85 0
 31
-R10
+R5
 !s107 C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/DisplayDecoder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025|C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/DisplayDecoder.sv|
 !i113 1
@@ -142,13 +168,13 @@ vLED_Animation
 R1
 R2
 !i10b 1
-!s100 ?c_3EDkF_MmOkzzihb4[W0
-IhoA538VEzD2PYB]=9KeOL2
+!s100 J[[eIf<G28GadhGP@64EZ2
+IO9g<mTF7<XIHlW[0P2ESe2
 R3
 !s105 LED_Animation_sv_unit
 S1
 R0
-w1763692633
+w1763782704
 8C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv
 FC:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv
 L0 1
@@ -164,29 +190,3 @@ R6
 R7
 R8
 n@l@e@d_@animation
-vTestClockDivider2
-R1
-R9
-!i10b 1
-!s100 dF:=]cOYaIE`DZQK0Cf6i1
-I6D6nkXJRgbFZ4S]ZGLN?[1
-R3
-!s105 TestClockDivider2_sv_unit
-S1
-R0
-w1763780141
-8C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestClockDivider2.sv
-FC:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestClockDivider2.sv
-L0 3
-R4
-r1
-!s85 0
-31
-R10
-!s107 C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestClockDivider2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025|C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestClockDivider2.sv|
-!i113 1
-R6
-R7
-R8
-n@test@clock@divider2

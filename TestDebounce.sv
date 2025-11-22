@@ -15,7 +15,7 @@ module TestDebounce;
         .button_out(button_out)
     );
 
-    // Reloj de 10 ns (100 MHz)
+   
     always #5 clk = ~clk;
 
     initial begin

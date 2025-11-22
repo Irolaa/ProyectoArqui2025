@@ -17,8 +17,14 @@ module LED_Animation(
         else
             div <= div + 1;
     end
+	 
+	 
+	`ifdef MODEL_TECH
+		 assign slow_clk = clk;
+		  `else
+		 assign slow_clk = div[23];
+		  `endif
 
-    assign slow_clk = div[23];
 
     always_ff @(posedge slow_clk or posedge reset) begin
         if (reset) begin

@@ -12,82 +12,82 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:56:21 on Nov 21,2025
+# Start time: 22:54:40 on Nov 21,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/LED_Animation.sv 
 # -- Compiling module LED_Animation
 # 
 # Top level modules:
 # 	LED_Animation
-# End time: 20:56:21 on Nov 21,2025, Elapsed time: 0:00:00
+# End time: 22:54:40 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:56:21 on Nov 21,2025
+# Start time: 22:54:40 on Nov 21,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM.sv 
 # -- Compiling module CoffeeFSM
 # 
 # Top level modules:
 # 	CoffeeFSM
-# End time: 20:56:21 on Nov 21,2025, Elapsed time: 0:00:00
+# End time: 22:54:40 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/ClockDivider.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:56:21 on Nov 21,2025
+# Start time: 22:54:40 on Nov 21,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/ClockDivider.sv 
 # -- Compiling module ClockDivider
 # 
 # Top level modules:
 # 	ClockDivider
-# End time: 20:56:21 on Nov 21,2025, Elapsed time: 0:00:00
+# End time: 22:54:40 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/DisplayDecoder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:56:22 on Nov 21,2025
+# Start time: 22:54:40 on Nov 21,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/DisplayDecoder.sv 
 # -- Compiling module DisplayDecoder
 # 
 # Top level modules:
 # 	DisplayDecoder
-# End time: 20:56:22 on Nov 21,2025, Elapsed time: 0:00:00
+# End time: 22:54:40 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:56:22 on Nov 21,2025
+# Start time: 22:54:40 on Nov 21,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeController.sv 
 # -- Compiling module CoffeeController
 # 
 # Top level modules:
 # 	CoffeeController
-# End time: 20:56:22 on Nov 21,2025, Elapsed time: 0:00:00
+# End time: 22:54:40 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/Debounce.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:56:22 on Nov 21,2025
+# Start time: 22:54:41 on Nov 21,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/Debounce.sv 
 # -- Compiling module Debounce
 # 
 # Top level modules:
 # 	Debounce
-# End time: 20:56:22 on Nov 21,2025, Elapsed time: 0:00:00
+# End time: 22:54:41 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestClockDivider2.sv}
+# vlog -sv -work work +incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025 {C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:56:22 on Nov 21,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestClockDivider2.sv 
-# -- Compiling module TestClockDivider2
+# Start time: 22:54:41 on Nov 21,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025" C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb2.sv 
+# -- Compiling module CoffeeFSM_tb2
 # 
 # Top level modules:
-# 	TestClockDivider2
-# End time: 20:56:22 on Nov 21,2025, Elapsed time: 0:00:00
+# 	CoffeeFSM_tb2
+# End time: 22:54:41 on Nov 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  TestClockDivider2
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" TestClockDivider2 
-# Start time: 20:56:23 on Nov 21,2025
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  CoffeeFSM_tb2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" CoffeeFSM_tb2 
+# Start time: 22:54:41 on Nov 21,2025
 # Loading sv_std.std
-# Loading work.TestClockDivider2
-# Loading work.ClockDivider
+# Loading work.CoffeeFSM_tb2
+# Loading work.CoffeeFSM
 # 
 # add wave *
 # view structure
@@ -95,8 +95,9 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestClockDivider2.sv(28)
-#    Time: 520 ns  Iteration: 0  Instance: /TestClockDivider2
-# Break in Module TestClockDivider2 at C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/TestClockDivider2.sv line 28
-# End time: 20:56:52 on Nov 21,2025, Elapsed time: 0:00:29
+# >>> Cafe EXPRESO terminado correctamente.
+# ** Note: $stop    : C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb2.sv(40)
+#    Time: 405 ns  Iteration: 0  Instance: /CoffeeFSM_tb2
+# Break in Module CoffeeFSM_tb2 at C:/Users/irola/OneDrive/Escritorio/ProyectoArqui2025/CoffeeFSM_tb2.sv line 40
+# End time: 22:55:21 on Nov 21,2025, Elapsed time: 0:00:40
 # Errors: 0, Warnings: 0

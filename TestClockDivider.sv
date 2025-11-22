@@ -13,7 +13,6 @@ module TestClockDivider();
         .clk_out(clk_out)
     );
 
-    // Generador de reloj: periodo = 10ns (frecuencia = 100MHz)
     initial clk = 0;
     always #5 clk = ~clk;
 

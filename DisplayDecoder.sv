@@ -8,7 +8,7 @@ module DisplayDecoder(
 
             //TIPO DE CAFÉ
             4'd0: segments = 7'b0000110; // E (espresso)
-            4'd1: segments = 7'b1000111; // L (leche)
+            4'd1: segments = 7'b1000111; // L (Latte)
             4'd2: segments = 7'b1000110; // C (capuchino)
 
             //ESTADOS

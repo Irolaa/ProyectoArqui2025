@@ -2,6 +2,7 @@
 
 module TestCoffeeController;
 
+    // Señales del DUT
     logic clk;
     logic reset;
     logic next_button;
@@ -10,10 +11,14 @@ module TestCoffeeController;
     logic [6:0] seg_state;
     logic [4:0] led;
 
-    // =======================
-    // Instanciar CoffeeController
-    // =======================
-    CoffeeController uut (
+    // Señales internas expuestas
+    logic [1:0] coffee_sel;
+    logic [3:0] display_state;
+
+    // ==========================================================
+    // INSTANCIA DEL DUT
+    // ==========================================================
+    CoffeeController dut (
         .clk(clk),
         .reset(reset),
         .next_button(next_button),
@@ -23,73 +28,98 @@ module TestCoffeeController;
         .led(led)
     );
 
-    // =======================
-    // CLOCK 100 MHz
-    // =======================
-    always #5 clk = ~clk;
+    // Conectar señales internas para debugging
+    assign coffee_sel    = dut.coffee_sel;
+    assign display_state = dut.display_state;
 
-    // =======================
-    // TAREA: esperar slow_clk
-    // =======================
-    task wait_slow();
-        @(posedge uut.slow_clk);
-        #1;
-        $display("t=%0t | TYPE=%b | STATE=%b (%0d) | LED=%b",
-                  $time, seg_type, seg_state, uut.state, led);
+    // ==========================================================
+    // RELOJ 50 MHz → 20 ns periodo
+    // ==========================================================
+    always #10 clk = ~clk;
+
+    // ==========================================================
+    // TASKS PARA SIMULAR BOTONES (con debounce realista)
+    // ==========================================================
+
+    // El debounce del CoffeeController trabaja con el clk real,
+    // así que necesitamos pulsos de varias muestras del reloj.
+    task press_next();
+        next_button = 0;                // activo-bajo
+        repeat(30) @(posedge clk);      // 30 ciclos = 600 ns aprox
+        next_button = 1;
+        repeat(30) @(posedge clk);
     endtask
 
-    // =======================
-    // SIMULACIÓN
-    // =======================
-    initial begin
-        $display("\n=== INICIO SIMULACIÓN ===");
+    task press_select();
+        select_button = 0;              // activo-bajo
+        repeat(30) @(posedge clk);
+        select_button = 1;
+        repeat(30) @(posedge clk);
+    endtask
 
+    // ==========================================================
+    // LOGGING — imprime cada cambio importante
+    // ==========================================================
+
+    function string decode_type(input [1:0] sel);
+        case(sel)
+            2'b00: decode_type = "Espresso";
+            2'b01: decode_type = "Latte";
+            2'b10: decode_type = "Capuchino";
+            default: decode_type = "???";
+        endcase
+    endfunction
+
+    function string decode_state(input [3:0] st);
+        case (st)
+            3: decode_state = "A - Agua";
+            4: decode_state = "C - Cafe";
+            5: decode_state = "L - Leche";
+            6: decode_state = "U - Azucar";
+            7: decode_state = "E - Crema";
+            8: decode_state = "F - Final";
+            default: decode_state = "IDLE";
+        endcase
+    endfunction
+
+    always @(coffee_sel or display_state) begin
+        $display("[t=%0t] coffee_sel=%b (%s)  | estado=%b (%s)",
+            $time, coffee_sel, decode_type(coffee_sel),
+            display_state, decode_state(display_state));
+    end
+
+    // ==========================================================
+    // TEST PRINCIPAL
+    // ==========================================================
+    initial begin
+        // Inicialización
         clk = 0;
         reset = 1;
-        next_button = 0;
-        select_button = 0;
+        next_button = 1;
+        select_button = 1;
 
-        #100;
+        // Reset global
+        repeat(10) @(posedge clk);
         reset = 0;
 
-        // ===========================
-        // SIM 1: EXPRESSO
-        // ===========================
-        $display("\n=== SIMULACIÓN 1: Expreso ===");
+        // Cambiar tipo de café
+        repeat(20) @(posedge clk);
+        press_next();    // E → L
 
-        // Iniciar
-        select_button = 1; #20; select_button = 0;
+        repeat(20) @(posedge clk);
+        press_next();    // L → C
 
-        repeat(10) wait_slow();
+        repeat(20) @(posedge clk);
+        press_next();    // C → E
 
-        // ===========================
-        // SIM 2: LATTE
-        // ===========================
-        $display("\n=== SIMULACIÓN 2: Latte ===");
+        // Empezar preparación
+        repeat(40) @(posedge clk);
+        press_select();  // genera start_pulse correcto
 
-        // Cambiar a Latte
-        next_button = 1; #20; next_button = 0;
+        // Correr suficiente tiempo para ver la FSM completa
+        repeat(3000) @(posedge clk);
 
-        // Iniciar
-        select_button = 1; #20; select_button = 0;
-
-        repeat(15) wait_slow();
-
-        // ===========================
-        // SIM 3: CAPUCHINO
-        // ===========================
-        $display("\n=== SIMULACIÓN 3: Capuchino ===");
-
-        // Cambiar a Capuchino
-        next_button = 1; #20; next_button = 0;
-
-        // Iniciar
-        select_button = 1; #20; select_button = 0;
-
-        repeat(20) wait_slow();
-
-        // Fin
-        $display("\n=== FIN DE SIMULACIÓN ===\n");
+        $display("\nSimulación terminada.\n");
         $stop;
     end
 

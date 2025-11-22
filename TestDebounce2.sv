@@ -24,7 +24,7 @@ module TestDebounce2;
         button_in = 0;
         #20 reset = 0;
 
-        // Ruido: pulsos cortos (no cambian el output)
+        // Ruido: pulsos cortos no cambia la salida
         repeat (10) begin
             button_in = 1;
             #50;  // demasiado corto para debounce

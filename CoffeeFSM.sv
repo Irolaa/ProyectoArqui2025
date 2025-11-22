@@ -23,7 +23,63 @@ module CoffeeFSM(
     logic timer_done;
     logic start_prev;  
     logic [31:0] end_timer;  
+	 
+	 
+	 
+	 
+	 
+	 
+	 	 ////PARTE QUE SE USA EXCLUSIVAMENTE PARA REALIZAR LA SIMULACIÓN
 
+	 
+//	 parameter FAST = 1;
+//
+//function automatic [31:0] get_duration(state_t st, logic [1:0] sel);
+//    if (FAST) begin
+//        //Simulación rápida
+//        case (st)
+//            AGUA:    get_duration = 10;
+//            CAFE:    get_duration = 8;
+//            LECHE:   get_duration = 6;
+//            AZUCAR:  get_duration = 6;
+//            CREMA:   get_duration = 5;
+//            default: get_duration = 5;
+//        endcase
+//    end else begin
+//        case (st)
+//            AGUA: begin
+//                if (sel == 2'b00) get_duration = 32'd100_000_000;
+//                else if (sel == 2'b01) get_duration = 32'd50_000_000;
+//                else get_duration = 32'd100_000_000;
+//            end
+//            CAFE: begin
+//                if (sel == 2'b00) get_duration = 32'd50_000_000;
+//                else if (sel == 2'b01) get_duration = 32'd50_000_000;
+//                else get_duration = 0;
+//            end
+//            LECHE: begin
+//                if (sel == 2'b00) get_duration = 0;
+//                else get_duration = 32'd50_000_000;
+//            end
+//            AZUCAR: begin
+//                if (sel == 2'b00) get_duration = 0;
+//                else get_duration = 32'd50_000_000;
+//            end
+//            CREMA: begin
+//                if (sel == 2'b10) get_duration = 32'd50_000_000;
+//                else get_duration = 0;
+//            end
+//            default: get_duration = 0;
+//        endcase
+//    end
+//endfunction
+	 
+	 
+	 
+
+	 ////PARTE QUE SE USA EN EL HARDWARE REAL
+	 
+	 
     // Duraciones en ciclos de reloj (50MHz = 50,000,000 ciclos/segundo)
     function automatic [31:0] get_duration(state_t st, logic [1:0] sel);
         case (st)
@@ -53,6 +109,10 @@ module CoffeeFSM(
             default: get_duration = 32'd0;
         endcase
     endfunction
+	 
+	 
+	 
+	 
 
     // Registro de estado + timer
     always_ff @(posedge clk or posedge reset) begin

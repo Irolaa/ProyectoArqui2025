@@ -1,5 +1,5 @@
 Flow report for CoffeeMaker
-Fri Nov 21 20:32:04 2025
+Fri Nov 21 22:58:49 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Nov 21 20:32:04 2025       ;
+; Flow Status                     ; Successful - Fri Nov 21 22:58:49 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CoffeeMaker                                 ;
 ; Top-level Entity Name           ; CoffeeController                            ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2025 20:31:00 ;
+; Start date & time ; 11/21/2025 22:57:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CoffeeMaker         ;
 +-------------------+---------------------+
@@ -78,29 +78,41 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+------------------+----------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name      ; Section Id           ;
 +--------------------------------------+----------------------------------------+---------------+------------------+----------------------+
-; COMPILER_SIGNATURE_ID                ; 264086613580332.176377865928968        ; --            ; --               ; --                   ;
+; COMPILER_SIGNATURE_ID                ; 264086613580332.176378746728308        ; --            ; --               ; --                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; TestDebounce2        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; TestLED_Animation2   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; TestClockDivider2    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; CoffeeFSM_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; TestDisplayDecoder2  ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; TestLED_Animation    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; TestDebounce         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; CoffeeFSM_tb2        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; TestClockDivider     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; TestDisplayDecoder   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; TestCoffeeController ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; TestDebounce2                          ; --            ; --               ; eda_simulation       ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; CoffeeFSM_tb2                          ; --            ; --               ; eda_simulation       ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --               ; eda_simulation       ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --               ; --                   ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --               ; eda_simulation       ;
 ; EDA_TEST_BENCH_FILE                  ; TestDebounce2.sv                       ; --            ; --               ; TestDebounce2        ;
+; EDA_TEST_BENCH_FILE                  ; TestLED_Animation2.sv                  ; --            ; --               ; TestLED_Animation2   ;
+; EDA_TEST_BENCH_FILE                  ; TestClockDivider2.sv                   ; --            ; --               ; TestClockDivider2    ;
 ; EDA_TEST_BENCH_FILE                  ; CoffeeFSM_tb.sv                        ; --            ; --               ; CoffeeFSM_tb         ;
 ; EDA_TEST_BENCH_FILE                  ; TestDisplayDecoder2.sv                 ; --            ; --               ; TestDisplayDecoder2  ;
+; EDA_TEST_BENCH_FILE                  ; TestLED_Animation.sv                   ; --            ; --               ; TestLED_Animation    ;
 ; EDA_TEST_BENCH_FILE                  ; TestDebounce.sv                        ; --            ; --               ; TestDebounce         ;
+; EDA_TEST_BENCH_FILE                  ; CoffeeFSM_tb2.sv                       ; --            ; --               ; CoffeeFSM_tb2        ;
 ; EDA_TEST_BENCH_FILE                  ; TestClockDivider.sv                    ; --            ; --               ; TestClockDivider     ;
 ; EDA_TEST_BENCH_FILE                  ; TestDisplayDecoder.sv                  ; --            ; --               ; TestDisplayDecoder   ;
 ; EDA_TEST_BENCH_FILE                  ; TestCoffeeController.sv                ; --            ; --               ; TestCoffeeController ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; TestDebounce2                          ; --            ; --               ; TestDebounce2        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TestLED_Animation2                     ; --            ; --               ; TestLED_Animation2   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TestClockDivider2                      ; --            ; --               ; TestClockDivider2    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; CoffeeFSM_tb                           ; --            ; --               ; CoffeeFSM_tb         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; TestDisplayDecoder2                    ; --            ; --               ; TestDisplayDecoder2  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TestLED_Animation                      ; --            ; --               ; TestLED_Animation    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; TestDebounce                           ; --            ; --               ; TestDebounce         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; CoffeeFSM_tb2                          ; --            ; --               ; CoffeeFSM_tb2        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; TestClockDivider                       ; --            ; --               ; TestClockDivider     ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; TestDisplayDecoder                     ; --            ; --               ; TestDisplayDecoder   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; TestCoffeeController                   ; --            ; --               ; TestCoffeeController ;
@@ -111,6 +123,10 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_NAME                  ; TestDisplayDecoder2                    ; --            ; --               ; eda_simulation       ;
 ; EDA_TEST_BENCH_NAME                  ; TestDebounce                           ; --            ; --               ; eda_simulation       ;
 ; EDA_TEST_BENCH_NAME                  ; TestDebounce2                          ; --            ; --               ; eda_simulation       ;
+; EDA_TEST_BENCH_NAME                  ; TestClockDivider2                      ; --            ; --               ; eda_simulation       ;
+; EDA_TEST_BENCH_NAME                  ; TestLED_Animation                      ; --            ; --               ; eda_simulation       ;
+; EDA_TEST_BENCH_NAME                  ; TestLED_Animation2                     ; --            ; --               ; eda_simulation       ;
+; EDA_TEST_BENCH_NAME                  ; CoffeeFSM_tb2                          ; --            ; --               ; eda_simulation       ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --               ; eda_simulation       ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --               ; --                   ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --               ; --                   ;
@@ -129,12 +145,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4897 MB             ; 00:00:20                           ;
-; Fitter               ; 00:00:40     ; 1.0                     ; 7377 MB             ; 00:02:10                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4835 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.4                     ; 5241 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4744 MB             ; 00:00:01                           ;
-; Total                ; 00:01:01     ; --                      ; --                  ; 00:02:42                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4893 MB             ; 00:00:18                           ;
+; Fitter               ; 00:00:39     ; 1.0                     ; 7382 MB             ; 00:02:13                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4839 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.4                     ; 5241 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4747 MB             ; 00:00:01                           ;
+; Total                ; 00:01:00     ; --                      ; --                  ; 00:02:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
